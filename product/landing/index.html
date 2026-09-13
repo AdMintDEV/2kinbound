@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inbound Score — AI visibility audit for small B2B SaaS</title>
+    <meta
+      name="description"
+      content="Free rate-limited AI-visibility audit for B2B SaaS companies with fewer than 50 employees, then $29/mo Starter monitoring. No invented citations."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#audit">Skip to free audit form</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">Inbound Score</a>
+        <nav aria-label="Primary">
+          <a href="#icp">Who it’s for</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#audit">Free audit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div>
+          <p class="eyebrow">AI visibility / GEO for B2B SaaS &lt; 50</p>
+          <h1>Does AI recommend your product — or a competitor?</h1>
+          <p class="lede">
+            Inbound Score is a one-shot AI-visibility audit for founders and
+            marketing leads at B2B SaaS companies with fewer than 50 employees.
+            We ask buyer-style questions across official answer-engine APIs and
+            show whether your brand is named. Paid Starter then re-checks on a
+            schedule.
+          </p>
+          <div class="actions">
+            <a class="button" href="#audit">Run a free audit</a>
+            <a class="button secondary" href="#pricing">See Starter at $29/mo</a>
+          </div>
+        </div>
+        <aside class="panel" aria-labelledby="audit-heading">
+          <h2 id="audit-heading">Free audit</h2>
+          <p>
+            Rate-limited: 3 audits per IP per day when the runner ships. The
+            form below is live as a request stub — it does
+            <strong>not</strong> call answer engines yet.
+          </p>
+          <form id="audit" action="/audit" method="get">
+            <label for="url">Brand URL</label>
+            <input
+              id="url"
+              name="url"
+              type="url"
+              required
+              placeholder="https://www.example.com"
+              autocomplete="url"
+            />
+            <label for="brand">Brand name (optional)</label>
+            <input id="brand" name="brand" type="text" maxlength="80" />
+            <label for="competitors">Competitor URLs (optional)</label>
+            <input
+              id="competitors"
+              name="competitors"
+              type="text"
+              placeholder="https://competitor.example, …"
+            />
+            <p class="hint">Up to two competitors on Starter. No outreach. No spam tools.</p>
+            <button type="submit">Continue to free audit</button>
+          </form>
+        </aside>
+      </section>
+
+      <section class="wrap section" id="icp">
+        <p class="eyebrow">ICP</p>
+        <h2>Built for small B2B SaaS, not “anyone on ChatGPT.”</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Who</h3>
+            <p>Founders and marketing leads at B2B SaaS companies with fewer than 50 employees.</p>
+          </article>
+          <article class="card">
+            <h3>Job</h3>
+            <p>
+              Find out if answer engines mention you for category and
+              alternative queries, then watch that weekly.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Not this</h3>
+            <p>
+              Not an agency suite, not a social-growth or community-spam
+              toolkit, and not a generic wrapper for tracking every consumer
+              chatbot.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" id="how">
+        <h2>How the product is supposed to work</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>1. Free one-shot audit</h3>
+            <p>
+              Submit a brand URL. We score mention and citation visibility on a
+              fixed prompt set. We store timestamps. We do not invent citations.
+            </p>
+          </article>
+          <article class="card">
+            <h3>2. Paid Starter monitoring</h3>
+            <p>
+              $29/month: two on-demand audits, four scheduled rechecks, two
+              competitors. Checkout is not wired on this page yet.
+            </p>
+          </article>
+        </div>
+        <p class="notice">
+          Official APIs only. Consumer ChatGPT / Perplexity pages are not
+          scraped.           We do not publish customer logos, quotes, or traffic numbers —
+          we do not have them yet.
+        </p>
+      </section>
+
+      <section class="wrap section" id="pricing">
+        <p class="eyebrow">Pricing</p>
+        <h2>Free audit first. Starter is $29/mo.</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Free</h3>
+            <p class="price">$0</p>
+            <p>Rate-limited one-shot audit (3 / IP / day when live).</p>
+            <p>Same visibility prompt set we will use for paying seats.</p>
+            <a class="button" href="#audit">Request the free audit</a>
+          </article>
+          <article class="card">
+            <h3>Starter</h3>
+            <p class="price">$29<span>/mo</span></p>
+            <ul>
+              <li>2 on-demand audits / month</li>
+              <li>4 scheduled rechecks / month</li>
+              <li>2 competitors tracked</li>
+            </ul>
+            <p class="hint">
+              Higher agency tiers are out of scope. A $19 floor exists only if
+              unit cost later forces it — we are not moving price on this page.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Inbound Score. Public landing only — not a launched paid product yet.</p>
+        <p><a href="/audit">Audit status</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

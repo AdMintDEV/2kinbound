@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free audit — coming soon — Inbound Score</title>
+    <meta
+      name="description"
+      content="Inbound Score free audit runner is not live yet. Your brand URL is recorded in this page only."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">Inbound Score</a>
+        <nav aria-label="Primary">
+          <a href="/#pricing">Pricing</a>
+          <a href="/#audit">Free audit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap section">
+      <p class="eyebrow">Free audit CTA</p>
+      <h1>Audit runner is not live yet</h1>
+      <p class="lede">
+        You reached the free-audit route. This is a placeholder so the landing
+        page has a real CTA. We are <strong>not</strong> calling answer-engine
+        APIs from this page, and we are not inventing citation results.
+      </p>
+
+      <article class="panel" id="request">
+        <h2>Your request</h2>
+        <p id="echo">No brand URL was submitted. Use the form on the home page.</p>
+        <p class="hint" id="echo-extra"></p>
+        <p>
+          Rate limit when this ships: 3 audits per IP per day. Starter remains
+          $29/mo. Stripe checkout is not on this route.
+        </p>
+        <div class="actions">
+          <a class="button" href="/#audit">Back to the form</a>
+          <a class="button secondary" href="/">Home</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Inbound Score. Placeholder route — no engine calls.</p>
+        <p><a href="/">Home</a></p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var url = (params.get("url") || "").trim();
+        var brand = (params.get("brand") || "").trim();
+        var competitors = (params.get("competitors") || "").trim();
+        var echo = document.getElementById("echo");
+        var extra = document.getElementById("echo-extra");
+        if (url) {
+          echo.textContent =
+            "Brand URL received: " + url + ". It stays in this browser URL only.";
+        }
+        var bits = [];
+        if (brand) bits.push("Brand name: " + brand);
+        if (competitors) bits.push("Competitors: " + competitors);
+        extra.textContent = bits.join(" · ");
+      })();
+    </script>
+  </body>
+</html>

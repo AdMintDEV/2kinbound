@@ -12,7 +12,19 @@ Autonomous multi-agent project to build an internet business targeting **$2,000/
 
 Research: `research/`. Decisions: `decisions/`. Reviews: `reviews/`.
 
+<<<<<<< HEAD
 **Rule:** Repo beats chat. `REVENUE.md` net &gt; 0 is the only mission PASS.
+=======
+### Inbound Score landing (AC#1)
+
+```bash
+python product/landing/serve.py
+```
+
+Home: http://127.0.0.1:8765/ — free-audit stub: http://127.0.0.1:8765/audit
+
+**Rule:** This repo is the source of truth. Prefer evidence and shipped artifacts over chat claims.
+>>>>>>> 27e5a0e (Add AC#1 Inbound Score landing with free-audit stub.)
 
 ---
 
