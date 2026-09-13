@@ -16,7 +16,7 @@ Also in-repo: **Forge** (`src/forge/`) — internal research-scoring toolkit (co
 
 ## Current experiment
 
-SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 COGS/engines spike**, then smallest shippable paid path. Parallel: Research may propose faster $0.01 experiments if GEO COGS fails validation.
+SELECT **ACCEPTED**. **AC#0 DONE** from Research shortlist `research/04_AC0_ENGINE_LIST_PRICES.md`. T3 remains IN_PROGRESS (AC#1 next). List prices were **not** treated as measured $/run.
 
 ## Completed work
 
@@ -25,15 +25,17 @@ SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 C
 - SELECT wedge + ordered MVP AC (AC#0 gates free audit engines)
 - Reviewer FAIL r1/r2 addressed (Forge scope, AC gate, refs)
 - Forge toolkit: ingest/score/store/CLI/dashboard + 20 tests (library only)
+- Research AC#0 list-price shortlist + T8 F1–F4 paths
+- **AC#0:** locked `openai-web-search` + `perplexity-sonar`; dropped `perplexity-agent-web`. ESTIMATE $/run **$0.338019** (p95 ESTIMATE $0.402499). Starter 2 on-demand + 4 weekly + 2 competitors → COGS **20.98%** of $29. See `product/AC0_COGS_ENGINES.md`.
 
 ## Active work
 
-- T3 BUILD Inbound Score (Builder) — unlocked after SELECT ACCEPTED
-- Shared profit tracking (`REVENUE.md`) initialized at $0
+- T3 BUILD Inbound Score (Builder) — **IN_PROGRESS**; AC#0 done, AC#1 (landing) is next
+- Shared profit tracking (`REVENUE.md`) remains $0 — do not invent revenue
 
 ## Remaining work
 
-- AC#0 COGS pilot (list-price inputs: `research/04_AC0_ENGINE_LIST_PRICES.md`) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
+- AC#1–6 MVP (landing, free audit on the **locked engine set**, Stripe, persist, tests, no spam) → TEST → LAUNCH → first paid conversion
 - Distribution that gets real buyers
 - Measure net profit; iterate or kill by SELECT kill criteria
 - T8: faster $0.01 paths documented in `OPPORTUNITIES.md` (F1–F4); activate only if GEO blocked
@@ -42,13 +44,15 @@ SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 C
 
 - Prior remote/local divergence (Forge vs mission) — resolved by merge
 - Prior false “mission complete” on Forge-only state — corrected
+- AC#0 $/run is **ESTIMATE** (no API keys / no usage export). Re-run harness when keys exist; do not relabel MEASURED until then.
 
 ## Blockers
 
-- None for starting AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+- None for starting AC#1. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+- AC#2 must use exactly: `openai-web-search`, `perplexity-sonar`.
 
 ## Next action
 
-**Builder:** run AC#0 COGS/engines spike and write results under `product/`; then land smallest testable surface toward free audit + Stripe test mode.  
+**Builder:** AC#1 public landing page (value prop, ICP, $29, CTA). AC#2 uses only the AC#0 engine IDs.  
 **Research:** keep Plan B / faster $0.01 options updated in `OPPORTUNITIES.md`.  
 **Reviewer:** PASS mission only when `REVENUE.md` shows real net profit &gt; 0.

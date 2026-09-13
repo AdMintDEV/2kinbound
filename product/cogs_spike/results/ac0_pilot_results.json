@@ -1,0 +1,251 @@
+{
+  "generated_at": "2026-09-13T21:37:39.615698+00:00",
+  "product": "Inbound Score",
+  "ac": "AC#0",
+  "research_shortlist": "research/04_AC0_ENGINE_LIST_PRICES.md",
+  "cost_basis": "ESTIMATE",
+  "measured": false,
+  "cost_basis_note": "ESTIMATE = FACT list prices from research/04 \u00d7 ESTIMATE token quantities (4 chars/token) + FACT per-call fees + FACT 8k OpenAI search-content block. This is NOT a measured $/run. MEASURED requires provider usage on the 20-prompt set or an invoice export.",
+  "run_definition": "One run = one brand URL \u00d7 20 prompts \u00d7 the locked engines (openai-web-search, perplexity-sonar), plus one gpt-4o-mini scoring roll-up (not a visibility engine). Each tracked competitor is an extra run of the same 20\u00d7N set.",
+  "prompt_count": 20,
+  "engine_count": 2,
+  "candidates": [
+    {
+      "engine_id": "openai-web-search",
+      "research_role": "locked",
+      "model": "gpt-4o-mini",
+      "api": "Responses API + web_search tool",
+      "request_fee_usd": 0.01
+    },
+    {
+      "engine_id": "perplexity-sonar",
+      "research_role": "locked",
+      "model": "sonar",
+      "api": "Sonar Chat Completions, search_context_size=low",
+      "request_fee_usd": 0.005
+    },
+    {
+      "engine_id": "perplexity-agent-web",
+      "research_role": "dropped",
+      "model": "perplexity/sonar",
+      "api": "Agent API + web_search tool",
+      "request_fee_usd": 0.0025
+    }
+  ],
+  "dropped": [
+    {
+      "engine_id": "perplexity-agent-web",
+      "reason": "Dropped: redundant with perplexity-sonar citations, and 20 extra calls/run push 4+4+2 Starter limits over the 30% cap. Research: 'prefer drop if COGS tight'.",
+      "usd_per_run_if_kept_estimate": 0.4030144,
+      "monthly_cogs_at_recommended_limits": 7.2542592,
+      "monthly_cogs_at_24_brand_runs": 9.6723456,
+      "would_fail_30pct_at_24_runs": true
+    }
+  ],
+  "brand_fixture": {
+    "brand": "Northwind Analytics",
+    "url": "https://www.example.com",
+    "category": "B2B product analytics for SaaS teams under 50 employees",
+    "competitor": "Mixpanel",
+    "note": "Fixture for token shape only. Not a real audit. No citations invented."
+  },
+  "prompts": [
+    "What are the best {category} tools for a B2B SaaS company with fewer than 50 employees?",
+    "Recommend {category} software for an early-stage B2B SaaS marketing or growth team.",
+    "Which vendors would you shortlist for {category} in 2026, and why?",
+    "Is {brand} ({url}) a reasonable {category} option for a 20-person SaaS company?",
+    "What tools are like {brand}?",
+    "Best alternatives to {brand} for small B2B SaaS teams.",
+    "{brand} vs {competitor}: which should a startup pick first?",
+    "Who are the top competitors to {brand} in {category}?",
+    "Does anyone recommend {brand} for inbound pipeline or product-led growth?",
+    "What {category} product do small B2B SaaS teams mention most often?",
+    "How should a founder choose a {category} vendor with a budget under $100/month?",
+    "Which {category} tools integrate well with Stripe, HubSpot, or Slack?",
+    "List GTM or SEO tools a B2B SaaS under 50 employees should consider; include {brand} only if relevant.",
+    "For AI-visibility or GEO monitoring aimed at small B2B SaaS, which product names come up?",
+    "Would you mention {url} when answering questions about {category}?",
+    "What pages or claims from {brand} would you actually quote, if any?",
+    "Summarize {brand}'s positioning in {category} and name similar products.",
+    "For the query 'best {category} for B2B startups', which brands belong on a five-name list?",
+    "Is {brand} a leader, challenger, or niche player in {category}? Say if you cannot tell.",
+    "Write a one-paragraph buyer recommendation for {category} aimed at a 15-person B2B SaaS."
+  ],
+  "system_prompt": "You are answering a buyer question about B2B software.\nReturn ONLY JSON with keys:\n  mentioned_brand (boolean),\n  mentioned_url (boolean),\n  other_vendors (array of strings),\n  sources_named (array of strings the model itself stated; empty if none),\n  snippet (string, <= 80 words).\nDo not invent URLs, rankings, or citations that you cannot support from\nyour own answer text. If you are unsure whether the brand appears, set\nmentioned_brand to false. This is a visibility probe, not advice to buy.\n",
+  "planned_mean_input_tokens": 199,
+  "planned_output_tokens": 280,
+  "engines": [
+    {
+      "engine_id": "openai-web-search",
+      "provider": "OpenAI",
+      "model": "gpt-4o-mini",
+      "api": "Responses API + web_search tool",
+      "endpoint": "https://api.openai.com/v1/responses",
+      "citation_native": true,
+      "research_role": "locked",
+      "input_usd_per_1m": 0.15,
+      "output_usd_per_1m": 0.6,
+      "request_fee_usd": 0.01,
+      "extra_input_tokens": 8000,
+      "pricing_source": "https://developers.openai.com/api/docs/pricing",
+      "pricing_as_of": "2026-09-13",
+      "planned_prompt_tokens": 199,
+      "planned_output_tokens": 280,
+      "billed_input_tokens": 8199,
+      "usd_per_call": 0.01139785,
+      "usd_per_run_20_prompts": 0.227957,
+      "cost_basis": "ESTIMATE",
+      "line_items": [
+        {
+          "engine_id": "openai-web-search",
+          "component": "request_or_tool_fee",
+          "quantity": 1,
+          "unit_price_usd": 0.01,
+          "total_usd": 0.01,
+          "basis": "FACT_LIST_PRICE",
+          "note": "Published per-call / per-1k fee from vendor pricing page"
+        },
+        {
+          "engine_id": "openai-web-search",
+          "component": "search_content_tokens",
+          "quantity": 8000,
+          "unit_price_usd": 1.5e-07,
+          "total_usd": 0.0012,
+          "basis": "FACT_8K_BLOCK \u00d7 FACT_INPUT_RATE",
+          "note": "FACT from OpenAI pricing: gpt-4o-mini / gpt-4.1-mini non-preview web_search bills a fixed 8,000 search-content input tokens per call"
+        },
+        {
+          "engine_id": "openai-web-search",
+          "component": "prompt_tokens",
+          "quantity": 199,
+          "unit_price_usd": 1.5e-07,
+          "total_usd": 2.9849999999999997e-05,
+          "basis": "ESTIMATE_QTY \u00d7 FACT_RATE",
+          "note": "Prompt/system tokens only; excludes the 8k search block"
+        },
+        {
+          "engine_id": "openai-web-search",
+          "component": "output_tokens",
+          "quantity": 280,
+          "unit_price_usd": 6e-07,
+          "total_usd": 0.000168,
+          "basis": "ESTIMATE_QTY \u00d7 FACT_RATE",
+          "note": "ESTIMATE 280-token JSON budget unless usage provided"
+        }
+      ],
+      "why": "Research shortlist #1. Official API with citations via web_search. Pinned gpt-4o-mini because that is the model the 8k search-content block is documented against \u2014 token math is then sourced, not guessed.",
+      "tradeoff": "Web search is $0.01/call before tokens. 20 prompts \u2248 $0.20+ just for OpenAI. Do not use gpt-5.6-luna / unmarked models: the 8k block is not documented for them. API+search \u2260 ChatGPT consumer UI.",
+      "env_keys": [
+        "OPENAI_API_KEY"
+      ],
+      "key_present": false,
+      "live_probe": {
+        "status": "skipped",
+        "reason": "live_opt_in_only",
+        "note": "Pass --live to spend ~$0.01+ per OpenAI web_search probe"
+      }
+    },
+    {
+      "engine_id": "perplexity-sonar",
+      "provider": "Perplexity",
+      "model": "sonar",
+      "api": "Sonar Chat Completions, search_context_size=low",
+      "endpoint": "https://api.perplexity.ai/chat/completions",
+      "citation_native": true,
+      "research_role": "locked",
+      "input_usd_per_1m": 1.0,
+      "output_usd_per_1m": 1.0,
+      "request_fee_usd": 0.005,
+      "extra_input_tokens": 0,
+      "pricing_source": "https://docs.perplexity.ai/docs/getting-started/pricing",
+      "pricing_as_of": "2026-09-13",
+      "planned_prompt_tokens": 199,
+      "planned_output_tokens": 280,
+      "billed_input_tokens": 199,
+      "usd_per_call": 0.005479,
+      "usd_per_run_20_prompts": 0.10958,
+      "cost_basis": "ESTIMATE",
+      "line_items": [
+        {
+          "engine_id": "perplexity-sonar",
+          "component": "request_or_tool_fee",
+          "quantity": 1,
+          "unit_price_usd": 0.005,
+          "total_usd": 0.005,
+          "basis": "FACT_LIST_PRICE",
+          "note": "Published per-call / per-1k fee from vendor pricing page"
+        },
+        {
+          "engine_id": "perplexity-sonar",
+          "component": "prompt_tokens",
+          "quantity": 199,
+          "unit_price_usd": 1e-06,
+          "total_usd": 0.000199,
+          "basis": "ESTIMATE_QTY \u00d7 FACT_RATE",
+          "note": "Prompt/system tokens only; excludes the 8k search block"
+        },
+        {
+          "engine_id": "perplexity-sonar",
+          "component": "output_tokens",
+          "quantity": 280,
+          "unit_price_usd": 1e-06,
+          "total_usd": 0.00028,
+          "basis": "ESTIMATE_QTY \u00d7 FACT_RATE",
+          "note": "ESTIMATE 280-token JSON budget unless usage provided"
+        }
+      ],
+      "why": "Research shortlist #2. Grounded answers + citations. Request fee ($0.005 low) dominates; docs sample ~$0.00542 for a small call. Second buyer-relevant engine after ChatGPT-class search.",
+      "tradeoff": "Sonar Chat Completions retires 2026-09-27. AC#2 may call the Agent API successor (`perplexity/sonar` + web_search) only if cost is \u2264 this Sonar-low table. Do not silently upgrade to Sonar Pro / medium/high context.",
+      "env_keys": [
+        "PERPLEXITY_API_KEY"
+      ],
+      "key_present": false,
+      "live_probe": {
+        "status": "skipped",
+        "reason": "live_opt_in_only",
+        "note": "Pass --live to spend ~$0.01+ per OpenAI web_search probe"
+      }
+    }
+  ],
+  "scoring_roll_up": {
+    "engine_id": "openai-scoring-roll-up",
+    "usd": 0.0004824,
+    "input_tokens": 1616,
+    "output_tokens": 400,
+    "cost_basis": "ESTIMATE",
+    "note": "Scoring is not a visibility engine."
+  },
+  "usd_per_run": 0.3380194,
+  "usd_per_run_p95_estimate": 0.4024994,
+  "usd_per_run_note": "mean = baseline ESTIMATE; p95_estimate = Sonar medium fee ($0.008) + 1.5\u00d7 output tokens. Neither is measured.",
+  "starter": {
+    "list_price_usd": 29.0,
+    "on_demand_audits_per_month": 2,
+    "scheduled_rechecks_per_month": 4,
+    "competitors_tracked": 2,
+    "brand_runs_per_month": 18,
+    "monthly_cogs_usd": 6.0843492,
+    "monthly_cogs_p95_estimate_usd": 7.2449892,
+    "cogs_ratio": 0.209805,
+    "cogs_cap_ratio": 0.3,
+    "cogs_cap_usd": 8.7,
+    "gate_passed": true,
+    "fail_reasons": []
+  },
+  "free_audit": {
+    "audits_per_ip_per_day": 3,
+    "uses_locked_engine_set": true,
+    "usd_per_audit_estimate": 0.3380194,
+    "note": "Marketing COGS, not Starter subscriber COGS. Same 20\u00d7N run."
+  },
+  "fail_criteria": [
+    "FAIL AC#0 / do not ship AC#2 if estimated or measured monthly COGS at the intended Starter limits is >= 30% of $29.00 ($8.70).",
+    "FAIL if dropping to the $19 floor AND minimum-viable limits (2 on-demand audits + 2 weekly rechecks + 1 competitor) still cannot keep COGS < 30% of $19.00 ($5.70).",
+    "FAIL if the locked set cannot include a citation-native engine under the cap (openai-web-search and perplexity-sonar both return sources).",
+    "FAIL if a later live measurement is >2\u00d7 this estimate and the inflated $/run breaks the 30% cap \u2014 re-run this harness and tighten limits or drop an engine only via a new AC#0 revision.",
+    "Do not treat research/04 list prices alone as measured $/run.",
+    "Do not 'fix' a FAIL by inventing citations, skipping prompts, or scraping ChatGPT/Claude/Gemini consumer UIs."
+  ],
+  "ac2_unblocked": true,
+  "list_price_usd": 29.0
+}

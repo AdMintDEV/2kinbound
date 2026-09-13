@@ -7,7 +7,7 @@
 
 | ID | Idea | Status | Evidence | Notes |
 |----|------|--------|----------|-------|
-| O1 | Inbound Score (GEO monitor) | ACCEPTED experiment | research/02, SELECT | AC#0 in flight; list prices in `research/04_AC0_ENGINE_LIST_PRICES.md` |
+| O1 | Inbound Score (GEO monitor) | ACCEPTED experiment | research/02, SELECT, research/04 | AC#0 locked `openai-web-search` + `perplexity-sonar`; ESTIMATE $/run in `product/AC0_COGS_ENGINES.md` |
 | O2 | Niche SEO directory | Plan B | research/02 | Slow organic; parallel only |
 | O3 | Utility API (screenshot/PDF) | Plan B | research/02 | If GEO COGS fails |
 | O4 | Comps / data API | Plan B | SoldComps pattern | Legal dataset TBD |

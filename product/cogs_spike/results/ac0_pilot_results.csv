@@ -1,0 +1,4 @@
+engine_id,provider,model,api,citation_native,usd_per_call,usd_per_run_20_prompts,cost_basis,key_present,live_probe_status
+openai-web-search,OpenAI,gpt-4o-mini,Responses API + web_search tool,True,0.01139785,0.227957,ESTIMATE,False,skipped
+perplexity-sonar,Perplexity,sonar,"Sonar Chat Completions, search_context_size=low",True,0.005479,0.10958,ESTIMATE,False,skipped
+RUN_TOTAL,,,"One run = one brand URL × 20 prompts × the locked engines (openai-web-search, perplexity-sonar), plus one gpt-4o-mini scoring roll-up (not a visibility engine). Each tracked competitor is an extra run of the same 20×N set.",,,0.3380194,ESTIMATE,,
