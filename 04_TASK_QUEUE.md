@@ -25,4 +25,4 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 ## Notes
 
 - PR #2 rejected: `pack_assets/` on a **public** repo is still free via raw.githubusercontent.com.
-- PR #3 is the money-rail fix: catalog off the git tree tip; `pack.html` fail-closed; Buy → `paymentUrl`.
+- PR #3 is the money-rail fix: catalog off the git tree tip; `pack.html` fail-closed; Buy → `paymentUrl`; `nest()` rejects ≤0.

@@ -1,4 +1,4 @@
-"""Team Pack must not leak on the GitHub Pages publish root."""
+"""Team Pack exclusives must not be public on Pages or in this git repo."""
 
 from __future__ import annotations
 
@@ -10,6 +10,8 @@ from tubecheck.pack_gate import is_pack_unlocked, pack_page_state
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
+SKIP_DIRS = {".git", ".venv", "__pycache__", ".pytest_cache", "node_modules", "dist", "build", "htmlcov"}
+PAID_FILENAMES = {"4130-catalog.csv"}
 
 
 def _js_call(fn: str, cfg: dict, params: dict):
@@ -28,9 +30,55 @@ def _js_call(fn: str, cfg: dict, params: dict):
     return json.loads(result.stdout)
 
 
+def _tracked_paths() -> list[str]:
+    raw = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT)
+    return [p.decode() for p in raw.split(b"\0") if p]
+
+
+def _catalog_header() -> str:
+    return ",".join(
+        ["shape", "od_in", "wall_in", "area_mm2", "I_mm4", "lb_ft", "A", "B", "C", "D"]
+    )
+
+
+def _walk_repo_files() -> list[Path]:
+    files: list[Path] = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        if any(part in SKIP_DIRS for part in path.parts):
+            continue
+        files.append(path)
+    return files
+
+
 def test_paid_catalog_not_in_pages_publish_root() -> None:
     assert not (DOCS / "4130-catalog.csv").exists()
     assert list(DOCS.rglob("*.csv")) == []
+
+
+def test_paid_catalog_not_in_repo_at_any_published_path() -> None:
+    """Public repo: every tracked path is a download. Off-Pages is not enough."""
+    tracked = _tracked_paths()
+    named = [rel for rel in tracked if Path(rel).name.lower() in PAID_FILENAMES]
+    assert named == [], f"paid catalog still tracked: {named}"
+
+    header = _catalog_header()
+    content_hits: list[str] = []
+    for rel in tracked:
+        if not rel.lower().endswith(".csv"):
+            continue
+        text = (ROOT / rel).read_text(encoding="utf-8", errors="ignore")
+        if header in text:
+            content_hits.append(rel)
+    assert content_hits == [], f"catalog CSV contents still tracked: {content_hits}"
+
+    working = [
+        str(path.relative_to(ROOT))
+        for path in _walk_repo_files()
+        if path.name.lower() in PAID_FILENAMES
+    ]
+    assert working == [], f"paid catalog still on disk: {working}"
 
 
 def test_published_pages_do_not_link_paid_catalog() -> None:

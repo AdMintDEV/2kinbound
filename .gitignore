@@ -10,3 +10,8 @@ build/
 htmlcov/
 .env
 .DS_Store
+
+# Paid exclusives — attach privately in Payhip/Stripe. Never commit.
+4130-catalog.csv
+**/4130-catalog.csv
+

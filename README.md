@@ -26,7 +26,7 @@ python -m http.server 8080 --directory docs
 
 http://127.0.0.1:8080 — not SAE, not SES.
 
-$9 Team Pack is sold at a merchant checkout (Payhip or Stripe file attachment). The catalog is not on GitHub Pages. Paste the checkout URL into `docs/config.js` (`PAYMENT.md`).
+$9 Team Pack is sold at a merchant checkout (Payhip or Stripe file attachment). The catalog is not in this public repo. Paste the checkout URL into `docs/config.js` (`PAYMENT.md`).
 
 ## SELECT — Inbound Score
 
