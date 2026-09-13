@@ -28,9 +28,11 @@ OpenAlternative-style directories often wait on organic traffic before featured-
 
 ## Final MVP acceptance criteria (ordered)
 
-0. **COGS / engines spike (GATE):** 48h pilot — 20 prompts × ≤3 engines; document measured $/run, named engines, and Starter limits so estimated COGS &lt;30% at list price. **Output must name the allowed engines.**  
+0. **COGS / engines spike (GATE)** — split:
+   - **AC#0a (cost model):** ≤3 named engines; 20-prompt design; **labeled ESTIMATE** $/run (FACT list prices × documented quantities OK); Starter limits with ESTIMATE COGS &lt;30% of $29. Unlocks **AC#1** and **AC#2 implementation** on frozen engine IDs only. Does **not** authorize live production engine spend.
+   - **AC#0b (measured):** provider `usage` and/or invoice (or bounded `--live` probes with human-approved keys/spend). Required before **LAUNCH**, before enabling live free-audit traffic, and before treating COGS as MEASURED. If measured &gt;2× ESTIMATE or breaks 30%, revise limits or kill. “48h pilot” = cost-model spike + measured validation before launch — not a wall-clock gate for 0a.
 1. Public landing page: value prop, ICP, pricing, CTA for free audit.  
-2. Free audit: submit brand/URL (+ optional competitors) → citation/visibility breakdown without human review; rate-limited. **Engines used in the free audit MUST be exactly the set named in AC#0. Do not ship AC#2 until AC#0 is done and engines + unit COGS are written.**  
+2. Free audit: submit brand/URL (+ optional competitors) → citation/visibility breakdown without human review; rate-limited. **Engines MUST be exactly the AC#0a locked set.** Code may land after 0a; **live calls / public traffic** require AC#0b (or explicit human spend approval).  
 3. Paid: Stripe Checkout Starter; auth dashboard with run history + scheduled re-checks + weekly email report.  
 4. Persist results with timestamps; never invent citations.  
 5. Automated tests: invalid input, rate limit, Stripe test checkout session, webhook → subscription active.  
