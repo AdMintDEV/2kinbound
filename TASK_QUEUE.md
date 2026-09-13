@@ -5,7 +5,7 @@ Canonical detailed queue also lives in `04_TASK_QUEUE.md` (keep both in sync).
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
 | T2 | DONE | Research+Reviewer | SELECT ACCEPTED |
-| T3 | IN_PROGRESS | Builder | AC#0 DONE — engines + $/run + Starter limits written. Next: AC#1 landing, then AC#2–6. |
+| T3 | IN_PROGRESS | Builder | AC#0 DONE from `research/04_AC0_ENGINE_LIST_PRICES.md` (ESTIMATE $/run, not measured). Next: AC#1 landing, then AC#2–6. |
 | T4 | TODO | Tester | Adversarial TEST vs AC |
 | T5 | TODO | Debugger | Fix failures |
 | T6 | TODO | Reviewer | Review build evidence (not chat) |

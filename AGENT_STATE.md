@@ -16,7 +16,7 @@ Also in-repo: **Forge** (`src/forge/`) — internal research-scoring toolkit (co
 
 ## Current experiment
 
-SELECT **ACCEPTED** for Inbound Score. Builder **T3 / AC#0** uses `research/04_AC0_ENGINE_LIST_PRICES.md` as the engine shortlist + list-price table. List prices alone are **not** measured $/run.
+SELECT **ACCEPTED**. **AC#0 DONE** from Research shortlist `research/04_AC0_ENGINE_LIST_PRICES.md`. T3 remains IN_PROGRESS (AC#1 next). List prices were **not** treated as measured $/run.
 
 ## Completed work
 
@@ -25,16 +25,17 @@ SELECT **ACCEPTED** for Inbound Score. Builder **T3 / AC#0** uses `research/04_A
 - SELECT wedge + ordered MVP AC (AC#0 gates free audit engines)
 - Reviewer FAIL r1/r2 addressed (Forge scope, AC gate, refs)
 - Forge toolkit: ingest/score/store/CLI/dashboard + 20 tests (library only)
-- Research AC#0 list-price shortlist (`research/04_AC0_ENGINE_LIST_PRICES.md`) + T8 F1–F4 paths
+- Research AC#0 list-price shortlist + T8 F1–F4 paths
+- **AC#0:** locked `openai-web-search` + `perplexity-sonar`; dropped `perplexity-agent-web`. ESTIMATE $/run **$0.338019** (p95 ESTIMATE $0.402499). Starter 2 on-demand + 4 weekly + 2 competitors → COGS **20.98%** of $29. See `product/AC0_COGS_ENGINES.md`.
 
 ## Active work
 
-- T3 BUILD Inbound Score (Builder) — **IN_PROGRESS**: AC#0 harness from the research shortlist
+- T3 BUILD Inbound Score (Builder) — **IN_PROGRESS**; AC#0 done, AC#1 (landing) is next
 - Shared profit tracking (`REVENUE.md`) remains $0 — do not invent revenue
 
 ## Remaining work
 
-- Finish AC#0 (named engines + ESTIMATE or measured $/run + Starter limits) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
+- AC#1–6 MVP (landing, free audit on the **locked engine set**, Stripe, persist, tests, no spam) → TEST → LAUNCH → first paid conversion
 - Distribution that gets real buyers
 - Measure net profit; iterate or kill by SELECT kill criteria
 - T8: faster $0.01 paths documented in `OPPORTUNITIES.md` (F1–F4); activate only if GEO blocked
@@ -43,14 +44,15 @@ SELECT **ACCEPTED** for Inbound Score. Builder **T3 / AC#0** uses `research/04_A
 
 - Prior remote/local divergence (Forge vs mission) — resolved by merge
 - Prior false “mission complete” on Forge-only state — corrected
+- AC#0 $/run is **ESTIMATE** (no API keys / no usage export). Re-run harness when keys exist; do not relabel MEASURED until then.
 
 ## Blockers
 
-- None for finishing AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
-- No provider API keys in this environment — $/run will be **ESTIMATE** from the research list-price table until a usage export exists.
+- None for starting AC#1. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+- AC#2 must use exactly: `openai-web-search`, `perplexity-sonar`.
 
 ## Next action
 
-**Builder:** complete AC#0 under `product/` from `research/04_AC0_ENGINE_LIST_PRICES.md`; freeze ≤3 engines for AC#2.  
+**Builder:** AC#1 public landing page (value prop, ICP, $29, CTA). AC#2 uses only the AC#0 engine IDs.  
 **Research:** keep Plan B / faster $0.01 options updated in `OPPORTUNITIES.md`.  
 **Reviewer:** PASS mission only when `REVENUE.md` shows real net profit &gt; 0.
