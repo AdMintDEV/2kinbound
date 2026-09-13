@@ -18,7 +18,7 @@
 
 | ID | Blocker | Status |
 |----|---------|--------|
-| B5 | Pack assets free | **IN FIX** — merge PR #3; close PR #2 |
+| B5 | Pack assets free | **IN FIX** — catalog deleted from this branch’s git tree; `pack.html` fail-closed; merge PR #3; PR #2 closed |
 | B4 | Merchant checkout URL | **ACTIVE** — human Payhip/Stripe (`PAYMENT.md`) |
 
 ## Next action

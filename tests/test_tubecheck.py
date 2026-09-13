@@ -1,3 +1,5 @@
+import pytest
+
 from tubecheck import TubeResult, evaluate, inch
 from tubecheck.nest import nest
 
@@ -56,3 +58,10 @@ def test_nest_counts_sticks() -> None:
     assert plan["stick_count"] >= 1
     assert plan["total_cut"] == 65
     assert all(sum(stick) <= plan["usable"] + 1e-6 for stick in plan["sticks"])
+
+
+def test_nest_rejects_non_positive_lengths() -> None:
+    with pytest.raises(ValueError, match="positive"):
+        nest([-5, 10], stock=72)
+    with pytest.raises(ValueError, match="positive"):
+        nest([0, 10], stock=72)

@@ -15,6 +15,7 @@ Expected output:
 4. Document human setup steps in `PAYMENT.md` for the chosen rail.
 5. Optional P2: `nest()` reject non-positive lengths.
 Success criteria: Tester cannot download full pack assets without paying; Buy button opens live checkout when human pastes URL  
+Notes: Pages leak fix is in progress on this branch — catalog off `docs/`, `pack.html` fail-closed. Still blocked on human merchant URL.  
 Next after: T4b re-test → human paste URL if missing → T9 distribution → first sale
 
 ## T9
