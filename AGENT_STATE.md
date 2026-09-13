@@ -1,41 +1,54 @@
-# AGENT_STATE — Forge toolkit only
+# AGENT_STATE
 
 **Updated:** 2026-09-13  
-**Scope:** This file tracks the **Forge** scoring library under `src/forge/` only.
+**Authority:** Team shared state for the autonomous profit mission. Repo files beat chat.
 
-## ⚠️ Not the team mission
+## Current mission
 
-The **2kinbound team objective** ($2k/mo profit business) is **NOT complete**.  
-Authoritative status: [`01_STATE.md`](./01_STATE.md) + [`04_TASK_QUEUE.md`](./04_TASK_QUEUE.md) + [`00_MISSION.md`](./00_MISSION.md).
+Build, launch, operate, and improve a legitimate internet business that produces **net profit** (revenue − attributable costs).  
+First milestone: **$0.01 legitimate net profit**. Then scale toward $100 → $500 → $1,000 → $2,000/mo with rising automation.  
+Code, MVP, and launch alone do **not** complete the mission.
 
-Do **not** treat anything below as permission to skip DISCOVER → BUILD → LAUNCH.
+## Current product
 
-## Forge toolkit objective
+**Inbound Score** (selected experiment): free AI-visibility / GEO audit → paid monitoring for **B2B SaaS &lt;50 employees**.  
+Also in-repo: **Forge** (`src/forge/`) — internal research-scoring toolkit (complete as a library; not the profit product).
 
-Build a verified **research-to-opportunity scoring pipeline** (ingest → score → store → inspect).
+## Current experiment
 
-**Forge status:** COMPLETE (library/tooling only)
+SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 COGS/engines spike**, then smallest shippable paid path. Parallel: Research may propose faster $0.01 experiments if GEO COGS fails validation.
 
-## Definition of Done (Forge only)
+## Completed work
 
-- Ingest → score → store → inspect works
-- Automated tests pass (20 as of 2026-09-13)
-- CLI pipeline works on sample data
-- HTTP API + dashboard browser-verified
-- Missing-data handling: `adjusted = raw × completeness`
-- No blocking Forge bugs
+- Shared memory seeded; Forge + mission histories merged on `main`
+- DISCOVER/VALIDATE v1.1 + scorecard
+- SELECT wedge + ordered MVP AC (AC#0 gates free audit engines)
+- Reviewer FAIL r1/r2 addressed (Forge scope, AC gate, refs)
+- Forge toolkit: ingest/score/store/CLI/dashboard + 20 tests (library only)
 
-## Requirements (Forge)
+## Active work
 
-1. Accept research records (JSON / CLI / API) — VERIFIED  
-2. Transparent weighted opportunity score — VERIFIED  
-3. Persist records and scores — VERIFIED  
-4. Incomplete data cannot inflate rank — VERIFIED  
-5. Unit tests — VERIFIED  
-6. Pipeline integration — VERIFIED  
-7. CLI + local dashboard — VERIFIED  
-8. Failure cases tested — VERIFIED  
+- T3 BUILD Inbound Score (Builder) — unlocked after SELECT ACCEPTED
+- Shared profit tracking (`REVENUE.md`) initialized at $0
 
-## Team next action
+## Remaining work
 
-See `04_TASK_QUEUE.md` — currently SELECT re-review / Builder T3 still blocked until SELECT **ACCEPTED**.
+- AC#0 COGS pilot → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
+- Distribution that gets real buyers
+- Measure net profit; iterate or kill by SELECT kill criteria
+- Fill `OPPORTUNITIES.md` / Plan B if kill or faster path found
+
+## Known failures
+
+- Prior remote/local divergence (Forge vs mission) — resolved by merge
+- Prior false “mission complete” on Forge-only state — corrected
+
+## Blockers
+
+- None for starting AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+
+## Next action
+
+**Builder:** run AC#0 COGS/engines spike and write results under `product/`; then land smallest testable surface toward free audit + Stripe test mode.  
+**Research:** keep Plan B / faster $0.01 options updated in `OPPORTUNITIES.md`.  
+**Reviewer:** PASS mission only when `REVENUE.md` shows real net profit &gt; 0.

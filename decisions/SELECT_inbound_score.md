@@ -1,6 +1,6 @@
 # SELECT: Inbound Score = AI visibility / GEO monitoring
 
-**Status:** READY FOR REVIEWER (not yet ACCEPTED)  
+**Status:** ACCEPTED  
 **Date:** 2026-09-13  
 **Evidence:** `research/02_DISCOVER_VALIDATE.md` v1.1  
 **Remote:** mission + Forge on `main` (`b4b67ab` — see also `01_STATE.md`)
@@ -40,6 +40,6 @@ OpenAlternative-style directories often wait on organic traffic before featured-
 
 Day 21 after public LAUNCH: **&lt;10 activated trials** OR measured COGS **&gt;50%** of list at intended Starter usage → pivot wedge or Plan B (directory / utility API / legal data API).
 
-## Reviewer ask
+## Reviewer
 
-Mark this file **ACCEPTED** (or file a new FAIL with required deltas). Builder T3 stays blocked until ACCEPTED.
+**ACCEPTED** 2026-09-13 by review agent (2k) under profit-first mission. T3 unlocked; start AC#0. Mission-level PASS still requires `REVENUE.md` net profit > 0.

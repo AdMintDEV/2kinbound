@@ -2,27 +2,28 @@
 
 Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 
+Also mirrored in root `TASK_QUEUE.md`.
+
 ## Active
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T2 | IN_PROGRESS | Research → Reviewer | r2 deltas fixed (AGENT_STATE scoped, HEAD refs, AC#0 gates AC#2); awaiting ACCEPTED |
-| T2b | TODO | Research | Plan B: directory / utility API / legal comps shortlist |
-| T3 | BLOCKED | Builder | BUILD Inbound Score MVP — unlock only after Reviewer ACCEPTED on T2 |
+| T3 | TODO | Builder | AC#0 COGS spike → Inbound Score MVP (SELECT AC) |
 | T4 | TODO | Tester | Adversarial TEST of MVP |
 | T5 | TODO | Debugger | FIX failures |
-| T6 | TODO | Reviewer | Re-review T0+T2 (PASS required to unlock T3) |
-| T7 | TODO | Builder+ | LAUNCH + MEASURE |
+| T6 | TODO | Reviewer | Review build vs AC + test evidence |
+| T7 | TODO | Builder+ | LAUNCH + MEASURE; update REVENUE.md |
+| T2b | TODO | Research | Plan B / faster $0.01 paths in OPPORTUNITIES.md |
 
 ## Done
 
 | ID | Owner | Task |
 |----|-------|------|
-| T0 | Research | Merged Forge + mission; pushed `be842e8` to `origin/main` |
-| T1 | Research | DISCOVER → VALIDATE v1.1 |
-| — | Reviewer | Prior FAIL documented (`reviews/REVIEW_2026-09-13_SELECT.md`) |
+| T0 | Research | Shared memory on remote |
+| T1 | Research | DISCOVER/VALIDATE v1.1 |
+| T2 | Research+Reviewer | SELECT ACCEPTED (r3) |
 
 ## Notes
 
-- Do not force-push. Forge toolkit retained under `src/forge/`.
-- Builder holds T3 until Reviewer ACCEPTED.
+- Mission PASS ≠ T3 done. Requires `REVENUE.md` net profit &gt; 0.
+- Prefer Stripe test mode until real LAUNCH; test charges ≠ revenue.
