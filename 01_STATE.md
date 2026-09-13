@@ -1,7 +1,7 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** LAUNCH PREP (first dollar) — TubeCheck live; payment not wired  
+**Phase:** LAUNCH PREP (first dollar) — TubeCheck live; **cannot charge safely**  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
 **Goal Manager:** Warden
 
@@ -21,12 +21,12 @@
 | ID | Blocker | Status |
 |----|---------|--------|
 | B3 | SELECT not ACCEPTED | **RESOLVED** — ACCEPTED r3 |
-| B4 | Stripe Payment Link for TubeCheck | **ACTIVE** — `docs/config.js` `paymentUrl` empty; human only (`PAYMENT.md`) |
-| B5 | Pack unlock gate leak | **ACTIVE** — pack assets visible when unpaid; Builder T8 |
-| — | Meaningful $ spend (GEO engines) | Needs human approval when required for AC#0b |
+| B4 | Merchant checkout for TubeCheck | **ACTIVE** — human Payment Link / Payhip (`PAYMENT.md`) |
+| B5 | Pack assets public on Pages | **P0 ACTIVE** — `4130-catalog.csv` + pack content free; Tester FAIL (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`) |
+| — | GEO engine spend (AC#0b) | Needs human keys; **not** on first-dollar critical path |
 
 ## Next action
 
-1. **Human:** create $9 Stripe Payment Link per `PAYMENT.md` and paste URL.
-2. **Builder (T8):** harden `pack.html` gate + wire Payment Link when provided.
-3. **Research (T9):** distribution plan for TubeCheck (no posting without approval).
+1. **Builder T8:** remove paid assets from public Pages; Buy CTA points at merchant that delivers the file (Payhip preferred for digital delivery; or Stripe + non-public delivery).
+2. **Human:** create $9 checkout that hosts/delivers the pack (Payhip easiest). Paste URL.
+3. **Research T9:** distribution plan (no posting without approval).

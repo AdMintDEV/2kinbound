@@ -26,3 +26,8 @@ GitHub Pages indexing first. Reddit/Discord from Jimmy’s accounts needs explic
 
 Spend $0 until a paying customer exists.
 | 2026-09-13 | Split AC#0 into 0a ESTIMATE (PASS) / 0b measured (pre-LAUNCH) | ACCEPTED | `reviews/REVIEW_2026-09-13_AC0_PR1.md`; SELECT amended |
+
+## D-kill static paywall (2026-09-13)
+
+Tester proved `4130-catalog.csv` is free on Pages; `?k=` unlock is obscurity.  
+**Decision:** Kill client-side paywall. First-dollar rail = merchant that delivers the file (Payhip preferred). Builder T8 removes public paid assets.

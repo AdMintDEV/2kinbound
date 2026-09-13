@@ -1,25 +1,35 @@
 # PAYMENT
 
-TubeCheck cannot collect money until a merchant link exists. This is the only required human step. **$0 to set up. No domain purchase.**
+TubeCheck cannot collect money until a merchant link exists **and** paid files are not free on GitHub Pages.
 
-## Do this (about 5 minutes if Stripe already verifies ID)
+**$0 to set up. No domain purchase.**
 
-1. Open [https://dashboard.stripe.com/register](https://dashboard.stripe.com/register) and create an account (or log in).
-2. Complete identity + bank so payouts can actually leave Stripe. US payout minimum is $0.01.
-3. Go to **Payment Links** → **New**.
-4. Product name: `4130 Team Pack`
-5. Price: **$9.00 USD** one time
-6. After payment, redirect customers to:
+## Preferred: Payhip (digital delivery)
 
-```
-https://AdMintDEV.github.io/2kinbound/pack.html?k=2k4130pack
-```
+Static Pages cannot securely gate files. Payhip hosts the paid download.
 
-(If GitHub Pages uses a different URL, use that origin + `/pack.html?k=2k4130pack`.)
+1. Open [https://payhip.com](https://payhip.com) and create an account (or log in).
+2. Create a digital product: `4130 Team Pack` — **$9.00 USD**.
+3. Upload paid files:
+   - `4130-catalog.csv` (full catalog)
+   - Optional: a short README / pack notes (from `pack.html` content)
+4. Publish and copy the product checkout URL.
+5. Paste the URL in chat (or into `docs/config.js` as `paymentUrl`).
+6. Confirm Builder has removed the full CSV from public `docs/` (T8).
 
-7. Copy the Payment Link URL (starts with `https://buy.stripe.com/`).
-8. Paste it into `docs/config.js` as `paymentUrl`, or reply in chat with the URL and I will paste it and push.
+## Fallback: Stripe Payment Link
 
-Payhip is the fallback if Stripe KYC is stuck: create a $9 digital product, upload `docs/pack.html` contents / the CSV, and send me that checkout URL instead.
+Only use if Payhip is blocked. Stripe Payment Link does **not** host files — you still need a delivery method (email the CSV after payment, or a private URL you rotate).
 
-Do **not** send API keys. The public Payment Link is enough.
+1. [Stripe register](https://dashboard.stripe.com/register) → identity + bank (US payout min $0.01).
+2. Payment Links → New → `4130 Team Pack` → **$9.00** one time.
+3. Success redirect (thank-you only, no assets):  
+   `https://admintdev.github.io/2kinbound/pack.html?paid=1`
+4. Paste Payment Link URL (`https://buy.stripe.com/...`) into chat.
+5. Delivery: email the CSV manually for the first sales, or add a private host later.
+
+## Do not
+
+- Do not send API keys.
+- Do not leave `4130-catalog.csv` on public Pages after T8.
+- Do not rely on `?k=2k4130pack` as a paywall.

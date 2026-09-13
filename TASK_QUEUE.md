@@ -2,45 +2,36 @@
 
 Statuses: TODO | IN_PROGRESS | BLOCKED | VERIFIED | COMPLETE
 
-Team queue also lives in `04_TASK_QUEUE.md`.
-
-## T8 (ACTIVE — highest leverage)
-Objective: Make TubeCheck able to collect $9 safely  
+## T8 (ACTIVE — P0 revenue)
+Objective: Make the $9 Team Pack something people must pay to get  
 Status: IN_PROGRESS  
 Owner: Builder  
-Depends: Human Stripe Payment Link (`PAYMENT.md`) for full completion; gate fix can ship without it  
-Success: (1) unpaid visitors cannot read pack assets when `paymentUrl` is set; (2) Buy CTA opens Payment Link; (3) paid redirect `?k=2k4130pack` unlocks pack; (4) `paymentUrl` committed when human pastes URL  
-Evidence: `docs/pack.html`, `docs/config.js`, `docs/app.js` + Tester report  
+Why it matters: Without this, Stripe/Payhip cannot produce net profit — the SKU is free on Pages  
+Required inputs: `reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`, `PAYMENT.md`, `docs/`  
+Expected output:
+1. Remove `docs/4130-catalog.csv` from public site (or replace with teaser-only sample).
+2. `pack.html` no longer serves paid assets in the clear; thank-you page only after purchase.
+3. Buy CTA on `index.html` → merchant URL (Payhip digital product preferred; Stripe Payment Link only if delivery is solved).
+4. Document human setup steps in `PAYMENT.md` for the chosen rail.
+5. Optional P2: `nest()` reject non-positive lengths.
+Success criteria: Tester cannot download full pack assets without paying; Buy button opens live checkout when human pastes URL  
+Next after: T4b re-test → human paste URL if missing → T9 distribution → first sale
 
 ## T9
 Objective: Distribution plan for first TubeCheck buyers  
 Status: TODO  
 Owner: Research  
-Success: 5–10 concrete channels with URLs + draft copy; marked needs-human-approval where posting required  
-Evidence: `research/05_TUBECHECK_DISTRIBUTION.md`
+Success: `research/05_TUBECHECK_DISTRIBUTION.md` with 5–10 concrete channels + draft copy marked needs-human-approval  
+Next after: human-approved posts OR organic indexing only
 
 ## T3b / AC#0b
-Objective: Measured Inbound Score engine COGS  
-Status: BLOCKED (keys/spend)  
-Depends: Human API keys + spend approval  
-Evidence target: `product/` measured artifact
+Status: BLOCKED (keys/spend) — defer until TubeCheck can charge
 
-## TASK-101
-Objective: Encode F.3.4 2026 minima and tube geometry with tests  
-Status: VERIFIED
-
-## TASK-102
-Objective: TubeCheck static site  
-Status: VERIFIED — public https://admintdev.github.io/2kinbound/
-
-## TASK-103
-Objective: $9 Team Pack files  
-Status: VERIFIED (`docs/pack.html`, `docs/4130-catalog.csv`) — gate leak open (T8)
+## TASK-101..103
+VERIFIED locally / shipped (pack integrity still FAIL — T8)
 
 ## TASK-104
-Objective: Real checkout  
-Status: BLOCKED — human Stripe Payment Link (`PAYMENT.md`)
+BLOCKED — human merchant link + T8 delivery redesign
 
 ## TASK-105
-Objective: GitHub Pages public URL  
-Status: COMPLETE — live
+COMPLETE — https://admintdev.github.io/2kinbound/

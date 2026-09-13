@@ -1,12 +1,11 @@
 # AGENT_STATE
 
 **Updated:** 2026-09-13 (Goal Manager: Warden)  
-**Authority:** Team shared state. Repo files beat chat.
+**Authority:** Repo files beat chat.
 
-## Current mission
+## Goal
 
-Build, launch, operate, and improve a legitimate internet business that produces **net profit**.  
-First milestone: **$0.01 legitimate net profit**. Then $100 → $500 → $1,000 → $2,000/mo.
+$2,000/mo net. Immediate milestone: **$0.01** legitimate net.
 
 ## Where we are
 
@@ -14,30 +13,24 @@ First milestone: **$0.01 legitimate net profit**. Then $100 → $500 → $1,000 
 |--------|-------|
 | Net profit | $0.00 |
 | Public product | TubeCheck LIVE |
-| Can collect money | **NO** — Stripe Payment Link missing |
-| SELECT product | Inbound Score — AC#0a PASS; AC#0b blocked on keys |
+| Can collect money safely | **NO** |
+| Why | Paid CSV is public; `paymentUrl` empty |
 
-## Bottleneck (ranked)
+## Bottleneck
 
-1. **Cannot collect money** — empty `paymentUrl` (human Stripe / Payhip).
-2. **Pack gate leak** — unpaid can still access pack content until Builder T8.
-3. **No distribution** — site exists; no approved outbound yet.
-4. **GEO engines** — AC#0b blocked; not on critical path for first $0.01.
+**P0:** Pack leakage (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`). Client-side unlock is dead.  
+**P0b:** Human must create merchant checkout that **delivers** the file (Payhip preferred).
+
+Inbound Score AC#0b is **parked** — not the first-dollar path.
 
 ## Active assignments
 
-| Task | Agent | Why |
-|------|-------|-----|
-| T8 | Builder | Unblocks safe checkout + wires Payment Link |
-| T9 | Research | Highest-leverage next after money rail: demand/distribution |
-| Human | Human | Create Payment Link per PAYMENT.md |
+| ID | Agent | Task |
+|----|-------|------|
+| T8 | Builder | Fix leakage + merchant delivery wiring |
+| T9 | Research | Distribution plan (no posting) |
+| Human | Human | Create $9 Payhip (or Stripe+delivery) per updated PAYMENT.md |
 
-## Idle policy
+## Decision
 
-If T8 waits on Stripe URL, Builder still ships gate hardening. Research starts T9 immediately. Do not idle. Do not start AC#0b without keys.
-
-## Kill / challenge notes
-
-- Inbound Score remains ACCEPTED long-term bet; TubeCheck is executed F2 for first penny.
-- Gumroad rejected (payout floor).
-- Do not buy domain/ads until a paying customer exists.
+Kill static paywall approach. Prefer Payhip digital product for first penny (hosts file; $0 setup). Stripe Payment Link alone is insufficient while assets remain on Pages.
