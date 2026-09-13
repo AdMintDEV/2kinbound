@@ -1,14 +1,14 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** SELECT (DISCOVER/VALIDATE v1 complete locally; remote seed pending push)  
+**Phase:** SELECT (DISCOVER/VALIDATE v1.1 complete locally (GEO evidence merged); remote seed pending push)  
 **Repo:** https://github.com/AdMintDEV/2kinbound
 
 ## Snapshot
 
 | Field | Value |
 |-------|--------|
-| Selected opportunity | **PROPOSED:** Inbound Score — free URL inbound/AEO audit → $19/mo monitoring |
+| Selected opportunity | **PROPOSED:** Inbound Score = AI visibility/GEO monitor — free audit → $29/mo (COGS-dependent) |
 | Plan B | Niche comps/data API (SoldComps pattern) — dataset TBD |
 | Product URL | NONE |
 | Revenue (MRR / profit) | $0 |

@@ -1,18 +1,17 @@
 # Opportunity scorecard
 
-**Updated:** 2026-09-13  
-**Scale:** 1–5 (higher better). Competition: 5 = easier entry / weaker incumbents for our wedge.
+**Updated:** 2026-09-13 (v1.1 — merged deeper GEO/directory evidence)
 
-| Candidate | $2k path | Buildability | Autonomy | Distribution | Competition | Time-to-$ | OpEx | Total | Notes |
-|-----------|----------|--------------|----------|--------------|-------------|-----------|------|-------|-------|
-| Inbound Score (free audit → $19 mon.) | 4 | 4 | 4 | 5 | 2 | 4 | 3 | **26** | Brand fit; crowded SEO — need sharp AEO wedge |
-| Niche comps data API (SoldComps pattern) | 5 | 2 | 5 | 3 | 3 | 2 | 4 | **24** | Best verified $; legal dataset UNKNOWN |
-| DB backup automation | 4 | 2 | 5 | 2 | 2 | 2 | 3 | **20** | SimpleBackups anchors; trust-heavy |
-| Social content planner | 4 | 3 | 2 | 3 | 2 | 3 | 3 | **20** | MediaFa.st $2k; spam/ToS risk |
-| AI PDF chat | 2 | 4 | 3 | 3 | 1 | 3 | 2 | **18** | Reject — commoditized |
-| Vertical compliance tracker | 3 | 3 | 3 | 2 | 3 | 2 | 4 | **20** | Insufficient primary evidence this pass |
+| Candidate | $2k path | Build | Autonomy | Dist. | Competition | Time→$ | OpEx | Total | Notes |
+|-----------|----------|-------|----------|-------|-------------|--------|------|-------|-------|
+| AI visibility / GEO + free audit | 4 | 4 | 4 | 4 | 2 | 4 | 3 | **25** | **PRIMARY** — Otterly/Livesov prove pay |
+| Niche SEO directory | 4 | 5 | 5 | 3 | 3 | 2 | 5 | **27** | Secondary — slow organic ramp |
+| Screenshot/PDF utility API | 4 | 3 | 5 | 3 | 3 | 3 | 4 | **25** | Plan B if GEO COGS fails |
+| Comps data API | 5 | 2 | 5 | 3 | 3 | 2 | 4 | **24** | Best $ proof; dataset TBD |
+| Invoice email automation | 4 | 3 | 3 | 3 | 2 | 3 | 3 | **21** | Support-heavy |
+| Template packs | 3 | 5 | 3 | 3 | 3 | 5 | 5 | **27** | Weak recurring |
+| AI docs autopilot | 4 | 2 | 2 | 3 | 2 | 2 | 3 | **18** | Reject — labor |
 
 ## Primary pick
 
-**Inbound Score** (row 1) for immediate BUILD.  
-**Plan B research:** comps-style data API once a legal dataset is identified.
+**AI visibility / GEO monitoring** (Inbound Score free audit → paid monitoring).
