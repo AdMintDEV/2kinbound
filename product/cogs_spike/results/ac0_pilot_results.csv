@@ -1,5 +1,4 @@
 engine_id,provider,model,api,citation_native,usd_per_call,usd_per_run_20_prompts,cost_basis,key_present,live_probe_status
-openai:gpt-4.1-nano,OpenAI,gpt-4.1-nano,Chat Completions (no web_search tool),False,0.0001319,0.002638,ESTIMATE,False,skipped
-google:gemini-2.5-flash-lite,Google,gemini-2.5-flash-lite,Gemini Developer API generateContent (no search grounding),False,0.0001319,0.002638,ESTIMATE,False,skipped
-perplexity:perplexity/sonar+web_search,Perplexity,perplexity/sonar,Agent API responses.create with tools=[{type: web_search}],True,0.00324975,0.064995,ESTIMATE,False,skipped
-RUN_TOTAL,,,"One run = one brand URL × 20 prompts × the 3 locked engines, plus one OpenAI gpt-4.1-nano scoring roll-up. Each tracked competitor is an extra run of the same 20×3 set.",,,0.0705926,ESTIMATE,,
+openai-web-search,OpenAI,gpt-4o-mini,Responses API + web_search tool,True,0.01139785,0.227957,ESTIMATE,False,skipped
+perplexity-sonar,Perplexity,sonar,"Sonar Chat Completions, search_context_size=low",True,0.005479,0.10958,ESTIMATE,False,skipped
+RUN_TOTAL,,,"One run = one brand URL × 20 prompts × the locked engines (openai-web-search, perplexity-sonar), plus one gpt-4o-mini scoring roll-up (not a visibility engine). Each tracked competitor is an extra run of the same 20×N set.",,,0.3380194,ESTIMATE,,
