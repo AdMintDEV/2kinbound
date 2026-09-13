@@ -1,20 +1,28 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** LAUNCH PREP — integrity OK; monetization incomplete  
+**Phase:** LAUNCH PREP — paywall + WTP teaser done; merchant URL missing  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
-**Goal Manager:** Warden
+**Goal Manager:** Warden  
+**HEAD:** `5d537c0` (T11)
 
 ## Snapshot
 
 | Field | Value |
 |-------|--------|
 | Net profit | $0.00 |
-| Paywall | PASS |
-| Money path | CONDITIONAL (T6) |
-| T11 | PR #4 draft |
-| Merchant URL | missing |
+| Paywall | PASS (T4b) |
+| Money path review | CONDITIONAL (T6) |
+| Free catalog | **Teaser ≤4 rows** (T11) |
+| Merchant URL | **MISSING** |
+
+## Blockers
+
+| ID | Blocker | Status |
+|----|---------|--------|
+| B4 | Merchant checkout URL | **ACTIVE** — human (`PAYMENT.md`) |
+| B6 | Free catalog kills WTP | **RESOLVED** — T11 |
 
 ## Next action
 
-Merge T11 → human Payhip (rotated file) → wire paymentUrl → Draft A.
+Human: Payhip $9 with **rotated** private catalog → paste URL → wire `paymentUrl` → Draft A.

@@ -2,24 +2,15 @@
 
 **Updated:** 2026-09-13 (Goal Manager: Warden)
 
-## Goal
-
-$2,000/mo net. First milestone: $0.01 net.
-
-## Where we are
-
-| Metric | Value |
-|--------|-------|
-| Net profit | $0.00 |
-| Paywall | PASS (T4b) |
-| Money-path review | CONDITIONAL (T6) |
-| T11 teaser catalog | PR #4 draft |
-| Merchant URL | missing |
-
 ## Bottleneck
 
-1. Finish/merge T11 (WTP)
-2. Human merchant URL (B4)
-3. Then Draft A
+**Only material blocker to first dollar:** human merchant checkout URL (Payhip preferred) with a private rotated catalog.
 
-Inbound Score parked.
+T11 + T4b + T8 done. Do not idle on code polish. Do not post Draft A until URL is live.
+
+## Active
+
+| ID | Agent | Task |
+|----|-------|------|
+| T10 | Human | Create Payhip/Stripe + paste URL |
+| — | Builder | Idle until URL paste → wire config.js |
