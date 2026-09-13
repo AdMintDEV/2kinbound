@@ -11,24 +11,15 @@ $2,000/mo net. First milestone: $0.01 net.
 | Metric | Value |
 |--------|-------|
 | Net profit | $0.00 |
-| Paywall tip/Pages | **PASS** (T4b) |
+| Paywall | PASS (T4b) |
+| Money-path review | CONDITIONAL (T6) |
+| T11 teaser catalog | PR #4 draft |
 | Merchant URL | missing |
-| Pack WTP | **at risk** — free CATALOG table in app.js |
 
-## Bottleneck (ranked)
+## Bottleneck
 
-1. **B6** — free embedded catalog may make $9 pack worthless → T11
-2. **B4** — human merchant URL
-3. Distribution Draft A blocked until 1+2
+1. Finish/merge T11 (WTP)
+2. Human merchant URL (B4)
+3. Then Draft A
 
-## Active
-
-| ID | Agent | Task |
-|----|-------|------|
-| T11 | Builder | Teaser-only free catalog |
-| T6 | Reviewer | Money-path review (after T11 or in parallel on T4b) |
-| Human | Human | Payhip when ready (rotated file) |
-
-## Decision
-
-Do not drive traffic until T11 reduces giveaway risk. Challenging weak monetization > posting Draft A into a free substitute.
+Inbound Score parked.
