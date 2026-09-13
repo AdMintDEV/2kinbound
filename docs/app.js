@@ -198,12 +198,12 @@ function setupPay() {
   const note = document.getElementById("pay-note");
   if (cfg.paymentUrl) {
     btn.href = cfg.paymentUrl;
-    btn.textContent = `Unlock Team Pack — $${cfg.priceUsd || 9}`;
-    note.textContent = "Stripe checkout. After payment you land on the pack download page.";
+    btn.textContent = `Buy Team Pack — $${cfg.priceUsd || 9}`;
+    note.textContent = "Checkout delivers the catalog (Payhip download or Stripe file attachment). This site does not host the paid file.";
   } else {
     btn.href = "./pack.html";
-    btn.textContent = "Open Team Pack page";
-    note.textContent = "Checkout is not connected yet. The checker above is free. Owner: paste a Stripe Payment Link into docs/config.js (see PAYMENT.md).";
+    btn.textContent = "Team Pack — checkout not connected";
+    note.textContent = "The checker above is free. The $9 pack is not a download on this site. Owner: attach the catalog to Payhip or a Stripe Payment Link, then paste the URL into docs/config.js (see PAYMENT.md).";
   }
 }
 

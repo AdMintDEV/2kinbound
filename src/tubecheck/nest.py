@@ -12,7 +12,9 @@ def nest(
     usable = stock - 2.0 * end_trim
     if usable <= 0:
         raise ValueError("stock too short for end trim")
-    pieces = sorted((length for length in lengths if length > 0), reverse=True)
+    if any(length <= 0 for length in lengths):
+        raise ValueError("cut lengths must be positive")
+    pieces = sorted(lengths, reverse=True)
     if any(length > usable for length in pieces):
         too_long = [length for length in pieces if length > usable]
         raise ValueError(f"piece longer than usable stock: {too_long}")

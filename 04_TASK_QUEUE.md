@@ -6,7 +6,7 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T8 | IN_PROGRESS | Builder+Cloud | Merge PR #3 (delete catalog from tree); close PR #2 |
+| T8 | IN_PROGRESS | Builder+Cloud | Merge PR #3 (delete catalog from tree); PR #2 closed |
 | T4b | TODO | Tester | Re-TEST after PR #3 on Pages |
 | T10 | BLOCKED | Human | Checkout URL + Draft A post after T8 PASS |
 | T7 | TODO | Builder+ | First sale MEASURE |
@@ -25,4 +25,4 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 ## Notes
 
 - PR #2 rejected: `pack_assets/` on a **public** repo is still free via raw.githubusercontent.com.
-- PR #3 is the money-rail fix.
+- PR #3 is the money-rail fix: catalog off the git tree tip; `pack.html` fail-closed; Buy → `paymentUrl`; `nest()` rejects ≤0.
