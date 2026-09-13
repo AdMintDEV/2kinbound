@@ -23,12 +23,12 @@ const APPLICATIONS = [
   ["Component Protection", "C", "Aluminum allowed"],
   ["Structural Tubing", "C", "Aluminum allowed"],
 ];
+// Teaser only. Full Size A/B/C/D map is merchant-only (Team Pack). Do not expand.
 const CATALOG = [
-  ["round", 0.75, 0.049], ["round", 0.75, 0.065],
-  ["round", 1.0, 0.049], ["round", 1.0, 0.065], ["round", 1.0, 0.083], ["round", 1.0, 0.095], ["round", 1.0, 0.12],
-  ["round", 1.125, 0.065], ["round", 1.25, 0.049], ["round", 1.25, 0.065], ["round", 1.25, 0.095],
-  ["round", 1.375, 0.049], ["round", 1.375, 0.065], ["round", 1.5, 0.049], ["round", 1.5, 0.065], ["round", 1.5, 0.095],
-  ["square", 1.0, 0.065], ["square", 1.0, 0.095], ["square", 1.25, 0.065],
+  ["round", 1.0, 0.095],
+  ["round", 1.0, 0.083],
+  ["round", 1.375, 0.049],
+  ["square", 1.0, 0.065],
 ];
 
 function roundProps(od, wall) {

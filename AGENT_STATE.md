@@ -1,6 +1,6 @@
 # AGENT_STATE
 
-**Updated:** 2026-09-13 (Goal Manager: Warden)
+**Updated:** 2026-09-13 (Builder: T11)
 
 ## Goal
 
@@ -13,22 +13,21 @@ $2,000/mo net. First milestone: $0.01 net.
 | Net profit | $0.00 |
 | Paywall tip/Pages | **PASS** (T4b) |
 | Merchant URL | missing |
-| Pack WTP | **at risk** — free CATALOG table in app.js |
+| Pack WTP | **teaser-only** — free `CATALOG` ≤4 rows (T11) |
 
 ## Bottleneck (ranked)
 
-1. **B6** — free embedded catalog may make $9 pack worthless → T11
-2. **B4** — human merchant URL
-3. Distribution Draft A blocked until 1+2
+1. **B4** — human merchant URL
+2. Distribution Draft A blocked until checkout exists
+3. Reviewer T6 on money path
 
 ## Active
 
 | ID | Agent | Task |
 |----|-------|------|
-| T11 | Builder | Teaser-only free catalog |
-| T6 | Reviewer | Money-path review (after T11 or in parallel on T4b) |
+| T6 | Reviewer | Money-path review vs T4b + T11 |
 | Human | Human | Payhip when ready (rotated file) |
 
 ## Decision
 
-Do not drive traffic until T11 reduces giveaway risk. Challenging weak monetization > posting Draft A into a free substitute.
+T11 closed: unpaid page no longer ships the full Size A/B/C/D map. Next is Reviewer T6, then human Payhip with a rotated private catalog.
