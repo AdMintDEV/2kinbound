@@ -1,7 +1,7 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** LAUNCH PREP (first dollar) — TubeCheck live; **cannot charge safely**  
+**Phase:** LAUNCH PREP (first dollar) — TubeCheck live; leakage fix on T8 branch  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
 **Goal Manager:** Warden
 
@@ -22,11 +22,11 @@
 |----|---------|--------|
 | B3 | SELECT not ACCEPTED | **RESOLVED** — ACCEPTED r3 |
 | B4 | Merchant checkout for TubeCheck | **ACTIVE** — human Payment Link / Payhip (`PAYMENT.md`) |
-| B5 | Pack assets public on Pages | **P0 ACTIVE** — `4130-catalog.csv` + pack content free; Tester FAIL (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`) |
+| B5 | Pack assets public on Pages | **RESOLVED on this branch** — full CSV in `pack_assets/` (not Pages); Buy disabled until `paymentUrl` set |
 | — | GEO engine spend (AC#0b) | Needs human keys; **not** on first-dollar critical path |
 
 ## Next action
 
-1. **Builder T8:** remove paid assets from public Pages; Buy CTA points at merchant that delivers the file (Payhip preferred for digital delivery; or Stripe + non-public delivery).
+1. **Tester T4b:** confirm unpaid visitors cannot fetch pack assets from Pages; empty `paymentUrl` does not unlock.
 2. **Human:** create $9 checkout that hosts/delivers the pack (Payhip easiest). Paste URL.
 3. **Research T9:** distribution plan (no posting without approval).

@@ -17,6 +17,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # Publish docs/ only. Paid pack files live in pack_assets/ and must stay out.
+      - name: Reject paid pack files in the Pages root
+        run: |
+          set -euo pipefail
+          if [ -f docs/4130-catalog.csv ]; then
+            echo "Paid catalog must not be published from docs/"
+            exit 1
+          fi
+          if grep -R -n -E '4130-catalog\.csv|unlockToken|2k4130pack' docs --include='*.html' --include='*.js' --include='*.css' --include='*.csv'; then
+            echo "Paid catalog / unlock secrets must not appear in public docs"
+            exit 1
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

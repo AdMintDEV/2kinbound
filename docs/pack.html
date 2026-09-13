@@ -3,33 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>4130 Team Pack</title>
+  <title>Thank you — 4130 Team Pack</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header>
     <div class="kicker">Team Pack</div>
-    <h1>4130 order sheet</h1>
-    <p class="lede" id="gate">If you paid, this page should open automatically after Stripe. If checkout is not connected yet, the files below are still listed so the owner can test the pack.</p>
+    <h1>Thank you</h1>
+    <p class="lede">If you just paid, this is the confirmation page. Your files come from the merchant checkout (download or the email used at purchase) — not from this site.</p>
   </header>
   <main class="panel">
-    <p>Includes:</p>
-    <ul>
-      <li>4130 catalog mapped to 2026 Size A/B/C/D — <a href="./4130-catalog.csv">4130-catalog.csv</a></li>
-      <li>Member size table from F.3.2.1 (unofficial copy for the shop wall)</li>
-      <li>Reminder: 1.00×0.083 is not Size A. 1.375×0.049 fails Size D on OD if you convert inches strictly (34.925 mm vs 35.0 mm).</li>
-    </ul>
-    <p>Still not official SES. Cut lists from TubeCheck are greedy nests, not a laser optimizer.</p>
-    <p><a href="./index.html">Back to checker</a></p>
+    <p>This page does not host or unlock the 4130 Team Pack. Paid assets are delivered after a successful purchase.</p>
+    <p>If you have not paid yet, go back to TubeCheck and use the Buy button when checkout is live.</p>
+    <p><a href="./index.html">Back to the free checker</a></p>
   </main>
-  <script src="./config.js"></script>
-  <script>
-    const params = new URLSearchParams(location.search);
-    const cfg = window.TUBECHECK_PAY || {};
-    const ok = !cfg.unlockToken || params.get("k") === cfg.unlockToken || !cfg.paymentUrl;
-    if (!ok) {
-      document.getElementById("gate").textContent = "This pack unlocks after payment. Go back and use the $9 checkout.";
-    }
-  </script>
 </body>
 </html>

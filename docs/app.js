@@ -196,14 +196,23 @@ function setupPay() {
   const cfg = window.TUBECHECK_PAY || {};
   const btn = document.getElementById("buy");
   const note = document.getElementById("pay-note");
-  if (cfg.paymentUrl) {
-    btn.href = cfg.paymentUrl;
-    btn.textContent = `Unlock Team Pack — $${cfg.priceUsd || 9}`;
-    note.textContent = "Stripe checkout. After payment you land on the pack download page.";
+  const price = cfg.priceUsd || 9;
+  const url = String(cfg.paymentUrl || "").trim();
+  btn.addEventListener("click", (event) => {
+    if (!url) event.preventDefault();
+  });
+  if (url) {
+    btn.href = url;
+    btn.removeAttribute("aria-disabled");
+    btn.classList.remove("disabled");
+    btn.textContent = `Buy Team Pack — $${price}`;
+    note.textContent = "Opens the merchant checkout. Paid files are delivered after payment — this site does not host them.";
   } else {
-    btn.href = "./pack.html";
-    btn.textContent = "Open Team Pack page";
-    note.textContent = "Checkout is not connected yet. The checker above is free. Owner: paste a Stripe Payment Link into docs/config.js (see PAYMENT.md).";
+    btn.removeAttribute("href");
+    btn.setAttribute("aria-disabled", "true");
+    btn.classList.add("disabled");
+    btn.textContent = "Checkout coming soon";
+    note.textContent = "Checkout is not connected yet. The checker above stays free. An empty payment URL does not unlock the Team Pack.";
   }
 }
 

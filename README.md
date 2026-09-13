@@ -26,7 +26,7 @@ python -m http.server 8080 --directory docs
 
 http://127.0.0.1:8080 — not SAE, not SES.
 
-$9 Team Pack after a Stripe link is pasted into `docs/config.js`.
+$9 Team Pack: Buy CTA uses `paymentUrl` in `docs/config.js`. Empty URL is “checkout coming soon” — it does not unlock paid files. Paid catalog lives in `pack_assets/` (not published on Pages). See `PAYMENT.md`.
 
 ## SELECT — Inbound Score
 

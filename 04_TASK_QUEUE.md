@@ -8,9 +8,8 @@ Also mirrored in root `TASK_QUEUE.md`.
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T8 | IN_PROGRESS | Builder | P0: stop free pack leakage; wire merchant delivery for $9 Team Pack |
+| T4b | TODO | Tester | Re-TEST pack paywall after T8 (Pages + empty `paymentUrl`) |
 | T9 | TODO | Research | TubeCheck distribution plan (drafts only; no posting) |
-| T4b | TODO | Tester | Re-TEST pack paywall after T8 |
 | T5 | TODO | Debugger | FIX failures from T4b |
 | T6 | TODO | Reviewer | Review money path vs AC + test evidence |
 | T7 | TODO | Builder+ | First sale MEASURE; update REVENUE.md |
@@ -27,9 +26,11 @@ Also mirrored in root `TASK_QUEUE.md`.
 | T3a | Builder+Reviewer | AC#0a ESTIMATE PASS |
 | T105 | Builder | GitHub Pages LIVE |
 | T4a | Tester | TubeCheck live TEST — FAIL pack integrity (filed) |
+| T8 | Builder | P0: stop free pack leakage; Buy CTA → `paymentUrl` or coming-soon |
 
 ## Notes
 
 - Mission PASS requires `REVENUE.md` net > 0.
 - Static `?k=` unlock is **killed** as a paywall. Do not pretend client-side tokens are commerce.
 - Goal Manager priority: revenue → remove revenue blockers. Skip GEO/architecture until money rail works.
+- T8 is **DONE on this branch**. Next: Tester T4b.
