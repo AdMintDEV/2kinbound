@@ -33,10 +33,10 @@ SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 C
 
 ## Remaining work
 
-- AC#0 COGS pilot → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
+- AC#0 COGS pilot (list-price inputs: `research/04_AC0_ENGINE_LIST_PRICES.md`) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
 - Distribution that gets real buyers
 - Measure net profit; iterate or kill by SELECT kill criteria
-- Fill `OPPORTUNITIES.md` / Plan B if kill or faster path found
+- T8: faster $0.01 paths documented in `OPPORTUNITIES.md` (F1–F4); activate only if GEO blocked
 
 ## Known failures
 
