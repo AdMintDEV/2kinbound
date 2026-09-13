@@ -3,7 +3,7 @@
 **Status:** READY FOR REVIEWER (not yet ACCEPTED)  
 **Date:** 2026-09-13  
 **Evidence:** `research/02_DISCOVER_VALIDATE.md` v1.1  
-**Remote:** mission + Forge on `main` @ `be842e8`
+**Remote:** mission + Forge on `main` (see `01_STATE.md` for HEAD SHA)
 
 ## Decision
 
@@ -26,15 +26,15 @@ Directory/templates scored **27** vs GEO **25** on raw totals because of autonom
 **Override rule:** optimize for **weeks-to-first-dollar + pre-sellable subscription**, not max autonomy-on-paper.  
 OpenAlternative-style directories often wait on organic traffic before featured-listing revenue; GEO has live paid comps (Otterly/Livesov) and a free-audit funnel we can ship in ≤3 weeks. Directory remains Plan B / parallel SEO asset only.
 
-## Final MVP acceptance criteria
+## Final MVP acceptance criteria (ordered)
 
+0. **COGS / engines spike (GATE):** 48h pilot — 20 prompts × ≤3 engines; document measured $/run, named engines, and Starter limits so estimated COGS &lt;30% at list price. **Output must name the allowed engines.**  
 1. Public landing page: value prop, ICP, pricing, CTA for free audit.  
-2. Free audit: submit brand/URL (+ optional competitors) → return citation/visibility breakdown without human review; rate-limited.  
+2. Free audit: submit brand/URL (+ optional competitors) → citation/visibility breakdown without human review; rate-limited. **Engines used in the free audit MUST be exactly the set named in AC#0. Do not ship AC#2 until AC#0 is done and engines + unit COGS are written.**  
 3. Paid: Stripe Checkout Starter; auth dashboard with run history + scheduled re-checks + weekly email report.  
 4. Persist results with timestamps; never invent citations.  
 5. Automated tests: invalid input, rate limit, Stripe test checkout session, webhook → subscription active.  
-6. AC #0 / spike: 48h COGS pilot doc (20 prompts × ≤3 engines) with measured $ and Starter limits set so estimated COGS &lt;30% at list price.  
-7. No LinkedIn/Reddit automation; no outbound spam features.
+6. No LinkedIn/Reddit automation; no outbound spam features.
 
 ## Kill criteria
 

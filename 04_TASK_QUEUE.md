@@ -6,7 +6,7 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T2 | IN_PROGRESS | Research → Reviewer | SELECT ready for re-review: wedge locked + AC in decisions; Reviewer must mark ACCEPTED before T3 |
+| T2 | IN_PROGRESS | Research → Reviewer | r2 deltas fixed (AGENT_STATE scoped, HEAD refs, AC#0 gates AC#2); awaiting ACCEPTED |
 | T2b | TODO | Research | Plan B: directory / utility API / legal comps shortlist |
 | T3 | BLOCKED | Builder | BUILD Inbound Score MVP — unlock only after Reviewer ACCEPTED on T2 |
 | T4 | TODO | Tester | Adversarial TEST of MVP |
