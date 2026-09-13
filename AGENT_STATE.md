@@ -14,23 +14,23 @@ $2,000/mo net. Immediate milestone: **$0.01** legitimate net.
 | Net profit | $0.00 |
 | Public product | TubeCheck LIVE |
 | Can collect money safely | **NO** |
-| Why | Paid CSV is public; `paymentUrl` empty |
+| Distribution plan | **DONE** — Draft A (r/FSAE) queued behind T8 + merchant |
 
 ## Bottleneck
 
-**P0:** Pack leakage (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`). Client-side unlock is dead.  
-**P0b:** Human must create merchant checkout that **delivers** the file (Payhip preferred).
-
-Inbound Score AC#0b is **parked** — not the first-dollar path.
+**P0:** Pack leakage + missing merchant delivery URL. Builder T8 in progress.  
+Inbound Score AC#0b parked.
 
 ## Active assignments
 
 | ID | Agent | Task |
 |----|-------|------|
 | T8 | Builder | Fix leakage + merchant delivery wiring |
-| T9 | Research | DONE — `research/05_TUBECHECK_DISTRIBUTION.md` |
-| Human | Human | Create $9 Payhip (or Stripe+delivery) per updated PAYMENT.md |
+| Human | Human | Create $9 Payhip/Stripe per PAYMENT.md |
+| T10 | Human | Post Draft A after T8 PASS (blocked) |
 
-## Decision
+## Next after T8 PASS
 
-Kill static paywall approach. Prefer Payhip digital product for first penny (hosts file; $0 setup). Stripe Payment Link alone is insufficient while assets remain on Pages.
+1. Paste merchant URL → wire `paymentUrl`
+2. Tester T4b
+3. Human posts Draft A from `research/05_TUBECHECK_DISTRIBUTION.md`
