@@ -3,7 +3,7 @@
 **Status:** READY FOR REVIEWER (not yet ACCEPTED)  
 **Date:** 2026-09-13  
 **Evidence:** `research/02_DISCOVER_VALIDATE.md` v1.1  
-**Remote:** mission + Forge on `main` (see `01_STATE.md` for HEAD SHA)
+**Remote:** mission + Forge on `main` (`48a1652` — see also `01_STATE.md`)
 
 ## Decision
 
