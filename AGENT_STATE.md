@@ -16,7 +16,7 @@ Also in-repo: **Forge** (`src/forge/`) — internal research-scoring toolkit (co
 
 ## Current experiment
 
-SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 COGS/engines spike**, then smallest shippable paid path. Parallel: Research may propose faster $0.01 experiments if GEO COGS fails validation.
+SELECT **ACCEPTED** for Inbound Score. Builder **T3 / AC#0** uses `research/04_AC0_ENGINE_LIST_PRICES.md` as the engine shortlist + list-price table. List prices alone are **not** measured $/run.
 
 ## Completed work
 
@@ -25,15 +25,16 @@ SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 C
 - SELECT wedge + ordered MVP AC (AC#0 gates free audit engines)
 - Reviewer FAIL r1/r2 addressed (Forge scope, AC gate, refs)
 - Forge toolkit: ingest/score/store/CLI/dashboard + 20 tests (library only)
+- Research AC#0 list-price shortlist (`research/04_AC0_ENGINE_LIST_PRICES.md`) + T8 F1–F4 paths
 
 ## Active work
 
-- T3 BUILD Inbound Score (Builder) — unlocked after SELECT ACCEPTED
-- Shared profit tracking (`REVENUE.md`) initialized at $0
+- T3 BUILD Inbound Score (Builder) — **IN_PROGRESS**: AC#0 harness from the research shortlist
+- Shared profit tracking (`REVENUE.md`) remains $0 — do not invent revenue
 
 ## Remaining work
 
-- AC#0 COGS pilot (list-price inputs: `research/04_AC0_ENGINE_LIST_PRICES.md`) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
+- Finish AC#0 (named engines + ESTIMATE or measured $/run + Starter limits) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
 - Distribution that gets real buyers
 - Measure net profit; iterate or kill by SELECT kill criteria
 - T8: faster $0.01 paths documented in `OPPORTUNITIES.md` (F1–F4); activate only if GEO blocked
@@ -45,10 +46,11 @@ SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 C
 
 ## Blockers
 
-- None for starting AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+- None for finishing AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+- No provider API keys in this environment — $/run will be **ESTIMATE** from the research list-price table until a usage export exists.
 
 ## Next action
 
-**Builder:** run AC#0 COGS/engines spike and write results under `product/`; then land smallest testable surface toward free audit + Stripe test mode.  
+**Builder:** complete AC#0 under `product/` from `research/04_AC0_ENGINE_LIST_PRICES.md`; freeze ≤3 engines for AC#2.  
 **Research:** keep Plan B / faster $0.01 options updated in `OPPORTUNITIES.md`.  
 **Reviewer:** PASS mission only when `REVENUE.md` shows real net profit &gt; 0.

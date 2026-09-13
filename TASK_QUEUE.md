@@ -5,7 +5,7 @@ Canonical detailed queue also lives in `04_TASK_QUEUE.md` (keep both in sync).
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
 | T2 | DONE | Research+Reviewer | SELECT ACCEPTED |
-| T3 | TODO | Builder | AC#0 COGS spike → Inbound Score MVP per SELECT AC |
+| T3 | IN_PROGRESS | Builder | AC#0 DONE — engines + $/run + Starter limits written. Next: AC#1 landing, then AC#2–6. |
 | T4 | TODO | Tester | Adversarial TEST vs AC |
 | T5 | TODO | Debugger | Fix failures |
 | T6 | TODO | Reviewer | Review build evidence (not chat) |
