@@ -9,7 +9,7 @@ Also mirrored in root `TASK_QUEUE.md`.
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
 | T8 | IN_PROGRESS | Builder | P0: stop free pack leakage; wire merchant delivery for $9 Team Pack |
-| T9 | TODO | Research | TubeCheck distribution plan (drafts only; no posting) |
+| T9 | DONE | Research | `research/05_TUBECHECK_DISTRIBUTION.md` — await T8 + human approval |
 | T4b | TODO | Tester | Re-TEST pack paywall after T8 |
 | T5 | TODO | Debugger | FIX failures from T4b |
 | T6 | TODO | Reviewer | Review money path vs AC + test evidence |

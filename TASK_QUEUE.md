@@ -19,10 +19,11 @@ Next after: T4b re-test → human paste URL if missing → T9 distribution → f
 
 ## T9
 Objective: Distribution plan for first TubeCheck buyers  
-Status: TODO  
+Status: COMPLETE  
 Owner: Research  
 Success: `research/05_TUBECHECK_DISTRIBUTION.md` with 5–10 concrete channels + draft copy marked needs-human-approval  
-Next after: human-approved posts OR organic indexing only
+Output: `research/05_TUBECHECK_DISTRIBUTION.md`; Kill stubs in `experiments/active/`  
+Next after: T8 PASS → human approves Draft A/B/C → post → log `market/customer_signals/`
 
 ## T3b / AC#0b
 Status: BLOCKED (keys/spend) — defer until TubeCheck can charge

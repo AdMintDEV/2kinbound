@@ -28,7 +28,7 @@ Inbound Score AC#0b is **parked** — not the first-dollar path.
 | ID | Agent | Task |
 |----|-------|------|
 | T8 | Builder | Fix leakage + merchant delivery wiring |
-| T9 | Research | Distribution plan (no posting) |
+| T9 | Research | DONE — `research/05_TUBECHECK_DISTRIBUTION.md` |
 | Human | Human | Create $9 Payhip (or Stripe+delivery) per updated PAYMENT.md |
 
 ## Decision
