@@ -1,7 +1,7 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** SELECT (DISCOVER/VALIDATE v1.1 complete locally (GEO evidence merged); remote seed pending push)  
+**Phase:** SELECT (reconcile remote; SELECT still PROPOSED)  
 **Repo:** https://github.com/AdMintDEV/2kinbound
 
 ## Snapshot
@@ -9,23 +9,27 @@
 | Field | Value |
 |-------|--------|
 | Selected opportunity | **PROPOSED:** Inbound Score = AI visibility/GEO monitor — free audit → $29/mo (COGS-dependent) |
-| Plan B | Niche comps/data API (SoldComps pattern) — dataset TBD |
+| Plan B | Niche directory / utility API / legal comps API |
 | Product URL | NONE |
 | Revenue (MRR / profit) | $0 |
-| Shared memory seeded | YES locally (`df38721`+); **NOT YET on GitHub remote** |
-| Cloud agent usable | **NO** until remote has ≥1 commit |
-| Local `gh` / browser GitHub auth | **NOT LOGGED IN** (box browser shows Sign in) |
+| Local shared memory | YES (mission/state/queue/research/reviews) |
+| Remote `origin/main` (pre-push) | **Forge** pipeline only (`7cb9ea4`) — diverged from local |
+| Local reconcile | IN PROGRESS — unrelated-histories merge (Forge + mission) on `main`; `forge-archive` points at `7cb9ea4` |
+| Cloud agent usable | YES against remote, but **wrong tree** until merged mission is pushed |
+| GitHub auth on box | NOT LOGGED IN (blocks push) |
 
 ## Blockers
 
 | ID | Blocker | Type | Owner |
 |----|---------|------|-------|
-| B1 | Empty GitHub remote — blocks Cursor cloud agent launch | External | Research+user: authenticate & push initial commit |
-| B2 | Box not signed into GitHub / `gh auth` | External | User: complete sign-in on box |
+| B1 | Remote/main was Forge-only; local was mission-only | Reconcile | Research: merge done locally; needs push |
+| B2 | Box not signed into GitHub / `gh auth` | External | User sign-in |
+| B3 | SELECT still PROPOSED (wedge + final AC) | Process | Research T2 → Reviewer |
 
 ## Decisions
 
-- See pending `decisions/SELECT_inbound_score.md` (to be written as T2).
+- `decisions/SELECT_inbound_score.md` — PROPOSED
+- `reviews/REVIEW_2026-09-13_SELECT.md` — FAIL (T3 locked)
 
 ## Metrics (post-LAUNCH)
 

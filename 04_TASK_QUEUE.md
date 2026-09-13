@@ -6,23 +6,24 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T0 | BLOCKED | Research | Push seed commit to `AdMintDEV/2kinbound` (needs GitHub auth on box) |
-| T1 | DONE | Research | DISCOVER → VALIDATE v1 in `research/02_DISCOVER_VALIDATE.md` + scorecard |
-| T2 | TODO | Research | SELECT: write `decisions/SELECT_inbound_score.md`; confirm AC with Reviewer |
-| T2b | TODO | Research | Plan B: shortlist legal datasets for comps-style API |
-| T3 | TODO | Builder | BUILD Inbound Score MVP per AC in research doc (after T2 / Reviewer OK) |
-| T4 | TODO | Tester | Adversarial TEST of MVP against AC |
-| T5 | TODO | Debugger | FIX failures from Tester |
-| T6 | TODO | Reviewer | REVIEW objective → requirements → AC → behavior → tests |
+| T0 | IN_PROGRESS | Research | Reconcile remote Forge + local mission; push merged `main` (needs GitHub auth). Do **not** force-push. |
+| T1 | DONE | Research | DISCOVER → VALIDATE v1.1 |
+| T2 | TODO | Research | SELECT: lock wedge; paste final AC into decisions; document scorecard override; mark ACCEPTED only after Reviewer re-check |
+| T2b | TODO | Research | Plan B dataset/directory shortlist |
+| T3 | BLOCKED | Builder | BUILD MVP — blocked until T0 on remote **and** T2 ACCEPTED by Reviewer |
+| T4 | TODO | Tester | Adversarial TEST of MVP |
+| T5 | TODO | Debugger | FIX failures |
+| T6 | TODO | Reviewer | Re-review after T0+T2 |
 | T7 | TODO | Builder+ | LAUNCH + MEASURE |
 
 ## Done
 
 | ID | Owner | Task |
 |----|-------|------|
-| T1 | Research | Sourced DISCOVER/VALIDATE written locally |
+| T1 | Research | Sourced DISCOVER/VALIDATE |
+| — | Reviewer | REVIEW FAIL documented in `reviews/REVIEW_2026-09-13_SELECT.md` |
 
 ## Notes
 
-- Do not start T3 until T0 unblocked (files on remote) OR Builder works from local `/workspace/2kinbound` with explicit sync plan.
-- Prefer Stripe test mode until LAUNCH.
+- Prefer merge over force-push so Forge code is preserved.
+- Builder holds T3 until Reviewer PASS for unlock.
