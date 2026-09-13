@@ -1,0 +1,61 @@
+[
+  {
+    "id": "tube-chassis",
+    "title": "AI tube-chassis design copilot",
+    "summary": "SolidWorks plugin that proposes weldment layouts for amateur racing chassis.",
+    "source": "desktop-research",
+    "market": { "tam_usd": 180000000, "growth_rate": 0.12, "notes": "CAD add-in niche plus motorsport hobbyists" },
+    "traction": { "users": 40, "revenue_usd": 0, "growth_rate": 0.0 },
+    "competition": { "intensity": 0.35, "incumbent_count": 3, "notes": "generic CAD copilots exist; chassis-specific is thin" },
+    "timing": { "urgency": 0.7, "catalysts": ["local plugin already in progress", "hobby EV/race interest"] },
+    "risks": [
+      { "description": "SOLIDWORKS API fragility", "severity": 0.7 },
+      { "description": "tiny paying market", "severity": 0.6 }
+    ],
+    "effort": { "months": 8, "cost_usd": 25000 },
+    "evidence": [
+      { "claim": "Existing local plugin codebase", "source": "SolidworksWorkflowPlugin", "strength": 0.8 },
+      { "claim": "User already iterating on chassis packs", "strength": 0.7 }
+    ]
+  },
+  {
+    "id": "estate-os",
+    "title": "Haven Estate operating system",
+    "summary": "Guided estate planning workspace with documents, vault, and collaborator flow.",
+    "source": "desktop-research",
+    "market": { "tam_usd": 4200000000, "growth_rate": 0.09 },
+    "traction": { "users": 0, "revenue_usd": 0 },
+    "competition": { "intensity": 0.75, "incumbent_count": 12 },
+    "timing": { "urgency": 0.45, "catalysts": ["aging demographics"] },
+    "risks": [
+      { "description": "regulated legal-adjacent product", "severity": 0.85 },
+      { "description": "trust and liability", "severity": 0.8 }
+    ],
+    "effort": { "months": 14, "cost_usd": 180000 },
+    "evidence": [
+      { "claim": "Partial Next.js prototype exists", "source": "haven-estate", "strength": 0.6 }
+    ]
+  },
+  {
+    "id": "shop-compiler",
+    "title": "Automated store compiler",
+    "summary": "Generate and operate Shopify stores from a product brief.",
+    "source": "desktop-research",
+    "market": { "tam_usd": 1500000000, "growth_rate": 0.18 },
+    "traction": { "users": 0, "revenue_usd": 1200, "growth_rate": 0.2 },
+    "competition": { "intensity": 0.8, "incumbent_count": 20 },
+    "timing": { "urgency": 0.55, "catalysts": ["AI store builders crowding in"] },
+    "risks": [
+      { "description": "platform policy and spam stores", "severity": 0.75 }
+    ],
+    "effort": { "months": 6, "cost_usd": 40000 },
+    "evidence": [
+      { "claim": "Existing SaaS prototype", "source": "ai-store-builder-saas", "strength": 0.65 }
+    ]
+  },
+  {
+    "id": "thin-data",
+    "title": "Unnamed local services idea",
+    "summary": "Only a title and a hunch. Used to verify missing-data shrinkage."
+  }
+]
