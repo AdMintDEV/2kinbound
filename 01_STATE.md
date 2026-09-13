@@ -12,6 +12,9 @@
 | Mission | First legitimate **net profit** ($0.01+), then scale to $2,000/mo |
 | Selected experiment | **ACCEPTED:** Inbound Score (GEO) — B2B SaaS <50 |
 | Parallel F-path | **TubeCheck** — public Pages LIVE |
+| GEO AC#0a | **PASS** — ESTIMATE + `openai-web-search` + `perplexity-sonar` |
+| GEO AC#0b | **TODO** — measured $/run; blocks LAUNCH / live free-audit traffic |
+| GEO AC#1 | Landing stub: `python product/landing/serve.py` → http://127.0.0.1:8765/ |
 | Product URL | https://admintdev.github.io/2kinbound/ |
 | Net profit | $0.00 — see `REVENUE.md` |
 | Cloud agent / `gh` | YES |
@@ -23,7 +26,7 @@
 | B3 | SELECT not ACCEPTED | **RESOLVED** — ACCEPTED r3 |
 | B4 | Merchant checkout for TubeCheck | **ACTIVE** — human Payment Link / Payhip (`PAYMENT.md`) |
 | B5 | Pack assets public on Pages | **P0 ACTIVE** — `4130-catalog.csv` + pack content free; Tester FAIL (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`) |
-| — | GEO engine spend (AC#0b) | Needs human keys; **not** on first-dollar critical path |
+| — | GEO AC#0b / live free-audit | Needs human keys; **not** on first-dollar critical path; AC#2 **code** OK, **live traffic** blocked |
 
 ## Next action
 

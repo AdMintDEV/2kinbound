@@ -1,6 +1,6 @@
 # Inbound Score landing (AC#1)
 
-Static public page. No Stripe. No answer-engine API calls.
+Static public page plus a gated `/audit` code path. No Stripe. Live engine traffic waits on AC#0b.
 
 ## Run
 

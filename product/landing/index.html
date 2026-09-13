@@ -43,11 +43,11 @@
         <aside class="panel" aria-labelledby="audit-heading">
           <h2 id="audit-heading">Free audit</h2>
           <p>
-            Rate-limited: 3 audits per IP per day when the runner ships. The
-            form below is live as a request stub — it does
-            <strong>not</strong> call answer engines yet.
+            Rate-limited: 3 audits per IP per day. Submitting runs the AC#2
+            <strong>code path</strong> in stub mode. Live API traffic waits on
+            AC#0b and is off unless explicitly opted in with approved keys.
           </p>
-          <form id="audit" action="/audit" method="get">
+          <form id="audit" action="/audit" method="post">
             <label for="url">Brand URL</label>
             <input
               id="url"

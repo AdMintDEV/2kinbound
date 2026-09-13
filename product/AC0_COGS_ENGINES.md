@@ -1,13 +1,20 @@
 # AC#0 — COGS / engines spike (GATE)
 
-**Status:** DONE (dry-run **ESTIMATE**; live spend = $0; **not measured**)  
+**Status:** **AC#0a PASS** (Reviewer `reviews/REVIEW_2026-09-13_AC0_PR1.md`) · **AC#0b TODO**  
 **Date:** 2026-09-13  
 **Product:** Inbound Score — free one-shot AI-visibility / GEO audit → paid Starter  
 **ICP:** B2B SaaS companies with fewer than 50 employees  
 **Starting shortlist + list prices:** `research/04_AC0_ENGINE_LIST_PRICES.md` (Research, FACT only)  
 **Harness output:** `product/cogs_spike/results/ac0_pilot_results.json`
 
-This file **names the only engines AC#2 may use**. List prices from Research are **not** measured $/run.
+This file **names the only engines AC#2 code may use**. List prices from Research are **not** measured $/run.
+
+| Gate | Meaning | Status | Unlocks |
+|------|---------|--------|---------|
+| **AC#0a** | Labeled ESTIMATE + ≤3 frozen engines + Starter ESTIMATE COGS &lt;30% of $29 | **PASS** | AC#1 landing; **implement** AC#2 **code** on the frozen IDs |
+| **AC#0b** | Measured $/run (`usage` / invoice / approved `--live`) | **TODO** | **LAUNCH**; **live free-audit traffic**; MEASURED COGS claims |
+
+AC#2 is **not** fully unblocked. Code may be written. Production / public engine spend waits on AC#0b.
 
 ## Final allowed engines (exactly 2 of the ≤3 shortlist)
 
@@ -129,13 +136,21 @@ Free audit (marketing): **3 / IP / day**, **same 2 engines**, ~$0.34 ESTIMATE ea
 
 This spike: **none triggered.**
 
-## AC#2 unblock
+## AC#2: code vs live
 
-**Yes — AC#2 is unblocked** on the frozen IDs + ESTIMATE unit COGS that clears 30% at $29.
+**Code (AC#0a — allowed now):** implement the free-audit path against **exactly** `openai-web-search` and `perplexity-sonar`. Rate-limit. Persist timestamps. Store only sources an API returned. Never invent citations.
 
-Wire the free audit to **`openai-web-search`** and **`perplexity-sonar` only**. Persist timestamps and only sources the API returned.
+**Live / LAUNCH (AC#0b — still closed):** do **not** send public free-audit traffic to those APIs, do not claim MEASURED COGS, and do not treat `--live` as approved until human-approved keys exist and a usage/invoice ledger replaces this ESTIMATE.
 
-When keys exist, re-run with `--live` (1-call probes) or a full 20-prompt usage export and replace ESTIMATE quantities with MEASURED `usage` — do not relabel this file MEASURED until that happens.
+Default runtime is a **safe stub** (no HTTP to OpenAI/Perplexity). Live calls require all of:
+
+1. `INBOUND_SCORE_LIVE=1` (explicit opt-in)
+2. `OPENAI_API_KEY` and `PERPLEXITY_API_KEY`
+3. `INBOUND_SCORE_AC0B=1` (AC#0b cleared)
+
+Missing any of those → stub, empty citation list, no spend.
+
+Do **not** run `--live` or set those env vars without human-approved keys. This environment has not done so.
 
 ## Harness + tests
 

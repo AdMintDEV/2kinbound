@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T21:37:39.615698+00:00",
+  "generated_at": "2026-09-13T21:53:13.015100+00:00",
   "product": "Inbound Score",
   "ac": "AC#0",
   "research_shortlist": "research/04_AC0_ENGINE_LIST_PRICES.md",
@@ -239,13 +239,18 @@
     "note": "Marketing COGS, not Starter subscriber COGS. Same 20\u00d7N run."
   },
   "fail_criteria": [
-    "FAIL AC#0 / do not ship AC#2 if estimated or measured monthly COGS at the intended Starter limits is >= 30% of $29.00 ($8.70).",
+    "FAIL AC#0a if estimated monthly COGS at the intended Starter limits is >= 30% of $29.00 ($8.70). Do not enable live AC#2 traffic (AC#0b / LAUNCH) until measured $/run is recorded.",
     "FAIL if dropping to the $19 floor AND minimum-viable limits (2 on-demand audits + 2 weekly rechecks + 1 competitor) still cannot keep COGS < 30% of $19.00 ($5.70).",
     "FAIL if the locked set cannot include a citation-native engine under the cap (openai-web-search and perplexity-sonar both return sources).",
     "FAIL if a later live measurement is >2\u00d7 this estimate and the inflated $/run breaks the 30% cap \u2014 re-run this harness and tighten limits or drop an engine only via a new AC#0 revision.",
     "Do not treat research/04 list prices alone as measured $/run.",
     "Do not 'fix' a FAIL by inventing citations, skipping prompts, or scraping ChatGPT/Claude/Gemini consumer UIs."
   ],
-  "ac2_unblocked": true,
+  "ac0a": "PASS",
+  "ac0b": "TODO",
+  "ac2_code_unblocked": true,
+  "ac2_live_unblocked": false,
+  "ac2_unblocked": false,
+  "ac2_note": "AC#0a allows implementing free-audit code on the frozen engine IDs. LAUNCH and live free-audit traffic require AC#0b. Not fully unblocked.",
   "list_price_usd": 29.0
 }

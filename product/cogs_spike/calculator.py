@@ -388,8 +388,9 @@ def evaluate_gate(
 
 
 FAIL_CRITERIA: tuple[str, ...] = (
-    "FAIL AC#0 / do not ship AC#2 if estimated or measured monthly COGS at the "
-    "intended Starter limits is >= 30% of $29.00 ($8.70).",
+    "FAIL AC#0a if estimated monthly COGS at the intended Starter limits is "
+    ">= 30% of $29.00 ($8.70). Do not enable live AC#2 traffic (AC#0b / LAUNCH) "
+    "until measured $/run is recorded.",
     "FAIL if dropping to the $19 floor AND minimum-viable limits "
     "(2 on-demand audits + 2 weekly rechecks + 1 competitor) still cannot keep "
     "COGS < 30% of $19.00 ($5.70).",

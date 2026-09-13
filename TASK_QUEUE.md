@@ -24,8 +24,14 @@ Owner: Research
 Success: `research/05_TUBECHECK_DISTRIBUTION.md` with 5–10 concrete channels + draft copy marked needs-human-approval  
 Next after: human-approved posts OR organic indexing only
 
+## T3a / AC#0a
+Status: COMPLETE (this PR) — ESTIMATE ledger + frozen `openai-web-search` + `perplexity-sonar`. Unlocks AC#1 and AC#2 **code** only.
+
 ## T3b / AC#0b
-Status: BLOCKED (keys/spend) — defer until TubeCheck can charge
+Status: BLOCKED (keys/spend) — required before LAUNCH / live free-audit traffic. Defer until TubeCheck can charge. Do not run `--live` without human-approved keys.
+
+## T3 / AC#1
+Status: COMPLETE on this PR — `product/landing/` + gated `/audit` stub (no spend).
 
 ## TASK-101..103
 VERIFIED locally / shipped (pack integrity still FAIL — T8)

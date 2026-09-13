@@ -340,7 +340,15 @@ def build_results(
             "note": "Marketing COGS, not Starter subscriber COGS. Same 20×N run.",
         },
         "fail_criteria": list(FAIL_CRITERIA),
-        "ac2_unblocked": gate.passed and basis != "HANDWAVY",
+        "ac0a": "PASS" if gate.passed else "FAIL",
+        "ac0b": "TODO",
+        "ac2_code_unblocked": bool(gate.passed),
+        "ac2_live_unblocked": False,
+        "ac2_unblocked": False,
+        "ac2_note": (
+            "AC#0a allows implementing free-audit code on the frozen engine IDs. "
+            "LAUNCH and live free-audit traffic require AC#0b. Not fully unblocked."
+        ),
         "list_price_usd": LIST_PRICE_USD,
     }
 
@@ -434,8 +442,10 @@ def print_summary(results: dict[str, Any]) -> None:
         f"({starter['cogs_ratio']:.2%} of ${starter['list_price_usd']:.2f}; "
         f"cap {starter['cogs_cap_ratio']:.0%} = ${starter['cogs_cap_usd']:.2f})"
     )
-    print(f"Gate: {'PASS' if starter['gate_passed'] else 'FAIL'}")
-    print(f"AC#2 unblocked: {results['ac2_unblocked']}")
+    print(f"Gate AC#0a: {'PASS' if starter['gate_passed'] else 'FAIL'}")
+    print(f"AC#0b: {results['ac0b']}")
+    print(f"AC#2 code unblocked: {results['ac2_code_unblocked']}")
+    print(f"AC#2 live unblocked: {results['ac2_live_unblocked']}")
     for dropped in results["dropped"]:
         print(
             f"Dropped {dropped['engine_id']}: 24-run COGS "

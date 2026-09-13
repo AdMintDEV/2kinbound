@@ -246,7 +246,11 @@ def test_harness_dry_run_writes_json_csv_and_refuses_measured_label(tmp_path: Pa
     assert results["prompt_count"] == 20
     assert results["engine_count"] == 2
     assert results["starter"]["gate_passed"] is True
-    assert results["ac2_unblocked"] is True
+    assert results["ac0a"] == "PASS"
+    assert results["ac0b"] == "TODO"
+    assert results["ac2_code_unblocked"] is True
+    assert results["ac2_live_unblocked"] is False
+    assert results["ac2_unblocked"] is False
     assert results["usd_per_run"] > 0.2  # web_search fees alone are $0.20
     names = {row["engine_id"] for row in results["engines"]}
     assert names == {"openai-web-search", "perplexity-sonar"}

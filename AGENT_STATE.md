@@ -21,7 +21,7 @@ $2,000/mo net. Immediate milestone: **$0.01** legitimate net.
 **P0:** Pack leakage (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`). Client-side unlock is dead.  
 **P0b:** Human must create merchant checkout that **delivers** the file (Payhip preferred).
 
-Inbound Score AC#0b is **parked** — not the first-dollar path.
+Inbound Score: **AC#0a PASS** (ESTIMATE + frozen engines). **AC#0b TODO** (measured). AC#2 *code* may use `openai-web-search` + `perplexity-sonar` only; **LAUNCH / live free-audit traffic waits on AC#0b**. Not the first-dollar path.
 
 ## Active assignments
 

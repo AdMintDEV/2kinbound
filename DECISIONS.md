@@ -25,7 +25,12 @@ GitHub Pages indexing first. Reddit/Discord from Jimmy’s accounts needs explic
 ## D-no domain/ads yet
 
 Spend $0 until a paying customer exists.
-| 2026-09-13 | Split AC#0 into 0a ESTIMATE (PASS) / 0b measured (pre-LAUNCH) | ACCEPTED | `reviews/REVIEW_2026-09-13_AC0_PR1.md`; SELECT amended |
+
+## D-AC#0a / AC#0b split (2026-09-13)
+
+Reviewer PASS on AC#0a (ESTIMATE + frozen engines). AC#0b measured remains open.  
+AC#2 **code** may use exactly `openai-web-search` + `perplexity-sonar`.  
+**LAUNCH / live free-audit traffic** requires AC#0b. See `reviews/REVIEW_2026-09-13_AC0_PR1.md`.
 
 ## D-kill static paywall (2026-09-13)
 
