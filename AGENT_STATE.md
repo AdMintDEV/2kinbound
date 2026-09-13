@@ -12,25 +12,21 @@ $2,000/mo net. Immediate milestone: **$0.01** legitimate net.
 | Metric | Value |
 |--------|-------|
 | Net profit | $0.00 |
-| Public product | TubeCheck LIVE |
-| Can collect money safely | **NO** |
-| Distribution plan | **DONE** — Draft A (r/FSAE) queued behind T8 + merchant |
+| TubeCheck | LIVE |
+| Pack leak on tip/Pages | **CLOSED** (PR #3 `615c3f9`) |
+| Merchant URL | **MISSING** |
 
 ## Bottleneck
 
-**P0:** Pack leakage + missing merchant delivery URL. Builder T8 in progress.  
-Inbound Score AC#0b parked.
+Human must create Payhip/Stripe $9 product from a **private** catalog copy and paste `paymentUrl`. Agents cannot invent this.
 
-## Active assignments
+## Active
 
 | ID | Agent | Task |
 |----|-------|------|
-| T8 | Builder | Fix leakage + merchant delivery wiring |
-| Human | Human | Create $9 Payhip/Stripe per PAYMENT.md |
-| T10 | Human | Post Draft A after T8 PASS (blocked) |
+| T4b | Tester | Re-TEST paywall |
+| T10 | Human | Checkout URL (blocked) |
 
-## Next after T8 PASS
+## Parked
 
-1. Paste merchant URL → wire `paymentUrl`
-2. Tester T4b
-3. Human posts Draft A from `research/05_TUBECHECK_DISTRIBUTION.md`
+Inbound Score AC#0b — not first-dollar path.

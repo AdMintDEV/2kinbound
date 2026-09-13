@@ -6,23 +6,25 @@ Statuses: `TODO` | `IN_PROGRESS` | `DONE` | `BLOCKED`
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T8 | IN_PROGRESS | Builder+Cloud | Merge PR #3 (delete catalog from tree); PR #2 closed |
-| T4b | TODO | Tester | Re-TEST after PR #3 on Pages |
-| T10 | BLOCKED | Human | Checkout URL + Draft A post after T8 PASS |
-| T7 | TODO | Builder+ | First sale MEASURE |
+| T4b | IN_PROGRESS | Tester | Adversarial re-TEST pack paywall on live Pages + main tip |
+| T5 | TODO | Debugger | FIX failures from T4b (if any) |
+| T6 | TODO | Reviewer | Review money path vs evidence after T4b |
+| T10 | BLOCKED | Human | Merchant URL + Draft A post |
+| T7 | TODO | Builder+ | First sale MEASURE; update REVENUE.md |
 | T3b | BLOCKED | Builder | AC#0b — parked |
 
 ## Done
 
 | ID | Owner | Task |
 |----|-------|------|
+| T8 | Builder+Cloud | Pack leak closed — PR #3 `615c3f9`; PR #2 closed |
 | T9 | Research | Distribution plan |
-| T4a | Tester | Live TEST — FAIL pack integrity |
+| T4a | Tester | Live TEST — FAIL (drove T8) |
 | T105 | Builder | Pages LIVE |
 | T3a | Builder+Reviewer | AC#0a PASS |
 | T2 | Research+Reviewer | SELECT ACCEPTED |
 
 ## Notes
 
-- PR #2 rejected: `pack_assets/` on a **public** repo is still free via raw.githubusercontent.com.
-- PR #3 is the money-rail fix: catalog off the git tree tip; `pack.html` fail-closed; Buy → `paymentUrl`; `nest()` rejects ≤0.
+- History may still contain old CSV blobs; tip + Pages must not. T4b should try known raw/history URLs and report residual risk.
+- Do not re-ask human for checkout in a loop; blocker remains B4 until they paste a URL.

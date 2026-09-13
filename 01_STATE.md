@@ -1,9 +1,10 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** LAUNCH PREP (first dollar) — T8 merge in progress  
+**Phase:** LAUNCH PREP — pack leak closed on tip; checkout URL still missing  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
-**Goal Manager:** Warden
+**Goal Manager:** Warden  
+**HEAD:** `615c3f9` (PR #3 merged)
 
 ## Snapshot
 
@@ -11,18 +12,20 @@
 |-------|--------|
 | Mission | First legitimate **net profit** ($0.01+), then $2,000/mo |
 | Product URL | https://admintdev.github.io/2kinbound/ |
+| Pack CSV on Pages | **404** (verified post-deploy) |
+| Catalog on main tip | **not tracked** |
 | Net profit | $0.00 |
-| T8 | PR #2 REJECTED (public raw still free); PR #3 preferred (catalog off git tree) |
+| Can collect money | **NO** — human merchant URL still required |
 
 ## Blockers
 
 | ID | Blocker | Status |
 |----|---------|--------|
-| B5 | Pack assets free | **IN FIX** — catalog deleted from this branch’s git tree; `pack.html` fail-closed; Buy → `paymentUrl`; merge PR #3; PR #2 closed |
-| B4 | Merchant checkout URL | **ACTIVE** — human Payhip/Stripe (`PAYMENT.md`) |
+| B5 | Pack assets free on tip | **RESOLVED** — PR #3; Pages 404 |
+| B4 | Merchant checkout URL | **ACTIVE** — Payhip preferred (`PAYMENT.md`) |
 
 ## Next action
 
-1. Merge PR #3 (rebased) → Pages redeploy → Tester T4b
-2. Human pastes merchant URL
-3. Then Draft A (r/FSAE) with human approval
+1. Tester T4b adversarial re-test
+2. Human creates $9 Payhip (private catalog upload) and pastes URL
+3. Wire `paymentUrl` → Draft A (r/FSAE) with human approval
