@@ -1,26 +1,23 @@
 # REVENUE
 
-**Updated:** 2026-09-13  
-**Rule:** Never claim profitability without rows below. Test/sim/affiliate clicks ≠ revenue unless attributable cash clears.
+All figures USD. No test, simulated, or affiliate-click “sales.”
 
 ## Summary
 
-| Metric | Amount (USD) |
-|--------|--------------|
+| Item | Amount |
+| --- | --- |
 | Gross revenue | 0.00 |
-| Direct costs (COGS / APIs) | 0.00 |
-| Hosting | 0.00 |
+| Processor fees | 0.00 |
+| Hosting | 0.00 (GitHub Pages) |
 | Advertising | 0.00 |
+| API costs | 0.00 |
 | Other attributable costs | 0.00 |
 | **Net profit** | **0.00** |
 
 ## Ledger
 
-| Date | Type | Amount | Source / evidence | Notes |
-|------|------|--------|-------------------|-------|
-| — | — | — | — | No real transactions yet |
+| Date | Type | Description | Gross | Cost | Net | Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-09-13 | open | Mission start (shared) | 0.00 | 0.00 | 0.00 | no transactions |
 
-## Notes
-
-- Stripe **test mode** payments do not count.
-- Record API/LLM costs attributable to serving paying (or attempting-to-pay) customers here.
+Mission PASS requires a real customer payment minus attributable costs, with a receipt.

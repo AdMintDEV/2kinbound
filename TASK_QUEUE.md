@@ -1,15 +1,31 @@
 # TASK_QUEUE
 
-Canonical detailed queue also lives in `04_TASK_QUEUE.md` (keep both in sync).
+Statuses: TODO | IN_PROGRESS | BLOCKED | VERIFIED | COMPLETE
 
-| ID | Status | Owner | Task |
-|----|--------|-------|------|
-| T2 | DONE | Research+Reviewer | SELECT ACCEPTED |
-| T3 | TODO | Builder | AC#0 COGS spike → Inbound Score MVP per SELECT AC |
-| T4 | TODO | Tester | Adversarial TEST vs AC |
-| T5 | TODO | Debugger | Fix failures |
-| T6 | TODO | Reviewer | Review build evidence (not chat) |
-| T7 | TODO | Builder+ | LAUNCH + MEASURE; update REVENUE.md |
-| T8 | TODO | Research | Maintain OPPORTUNITIES; faster $0.01 paths if blocked |
+Team queue also lives in `04_TASK_QUEUE.md`. This file tracks the TubeCheck F-path plus SELECT gates.
 
-**Mission PASS:** only when `REVENUE.md` net profit &gt; 0 with real attributable revenue.
+## T3 / AC#0
+Objective: Measure Inbound Score engine COGS  
+Status: TODO (needs API keys / spend approval if no free quota)  
+Depends: SELECT ACCEPTED  
+Evidence target: `product/` + `research/04_AC0_ENGINE_LIST_PRICES.md`
+
+## TASK-101
+Objective: Encode F.3.4 2026 minima and tube geometry with tests  
+Status: VERIFIED
+
+## TASK-102
+Objective: TubeCheck static site  
+Status: VERIFIED locally; public Pages pending
+
+## TASK-103
+Objective: $9 Team Pack files  
+Status: VERIFIED (`docs/pack.html`, `docs/4130-catalog.csv`)
+
+## TASK-104
+Objective: Real checkout  
+Status: BLOCKED — human Stripe Payment Link (`PAYMENT.md`)
+
+## TASK-105
+Objective: GitHub Pages public URL  
+Status: IN_PROGRESS — workflow in `.github/workflows/pages.yml`

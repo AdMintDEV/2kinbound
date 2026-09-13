@@ -1,0 +1,50 @@
+:root {
+  --bg: #10110f;
+  --panel: #1a1c18;
+  --ink: #e7e4d8;
+  --muted: #9a9686;
+  --line: #2c2f28;
+  --go: #8fca6b;
+  --stop: #e0716a;
+  --warn: #d4b45a;
+  --accent: #c4b48a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", Corbel, sans-serif; }
+body { line-height: 1.45; }
+a { color: var(--accent); }
+header, main, footer { max-width: 1080px; margin: 0 auto; padding: 24px; }
+header h1 { font-family: "Iowan Old Style", Georgia, serif; font-weight: 500; margin: 0 0 8px; letter-spacing: 0.02em; }
+.kicker { color: var(--warn); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+.lede { color: var(--muted); max-width: 62ch; }
+.disclaimer {
+  border: 1px solid var(--warn);
+  color: var(--warn);
+  padding: 12px 14px;
+  margin: 16px 0 8px;
+  font-size: 14px;
+}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); padding: 16px; }
+label { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 10px; }
+input, select, textarea, button {
+  font: inherit; color: var(--ink); background: #121410; border: 1px solid var(--line); padding: 8px 10px; width: 100%;
+}
+textarea { min-height: 120px; font-family: Consolas, "Courier New", monospace; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.row button, .chips button { width: auto; cursor: pointer; }
+button.primary { background: var(--accent); color: #14140f; font-weight: 700; border: 0; }
+.chips button { background: #22241e; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.pass { color: var(--go); font-weight: 700; }
+.fail { color: var(--stop); font-weight: 700; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0; }
+.metric { border: 1px solid var(--line); padding: 10px; }
+.metric b { display: block; font-size: 20px; }
+.metric span { color: var(--muted); font-size: 12px; }
+#status { min-height: 1.4em; color: var(--muted); margin-top: 8px; }
+footer { color: var(--muted); font-size: 13px; }
+@media (max-width: 800px) {
+  .grid, .metrics { grid-template-columns: 1fr 1fr; }
+}

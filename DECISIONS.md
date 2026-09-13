@@ -1,8 +1,27 @@
 # DECISIONS
 
-| Date | Decision | Status | Detail |
-|------|----------|--------|--------|
-| 2026-09-13 | Primary experiment = Inbound Score (GEO) for B2B SaaS &lt;50 | ACCEPTED | `decisions/SELECT_inbound_score.md` |
-| 2026-09-13 | Scorecard override: weeks-to-$ over raw directory/templates score | ACCEPTED | Same file |
-| 2026-09-13 | AC#0 COGS/engines gates free audit (AC#2) | ACCEPTED | Same file |
-| 2026-09-13 | Profit mission: first $0.01 net profit is primary success | ACCEPTED | User directive; see `AGENT_STATE.md` / `REVENUE.md` |
+## Team SELECT — Inbound Score (ACCEPTED)
+
+See `decisions/SELECT_inbound_score.md`. ICP: B2B SaaS &lt;50 employees. Free audit → $29/mo. AC#0 engine COGS is the gate.
+
+## D-TubeCheck — Zero-COGS parallel F-path
+
+Ship TubeCheck without waiting for GEO engines. Reason: AC#0 list prices imply paid OpenAI/Perplexity calls; that needs keys and can become meaningful spend. TubeCheck COGS is $0 until a sale (then Stripe 2.9%+$0.30).
+
+Does **not** cancel SELECT. It is the F2 “if GEO is blocked on auth/spend” path, executed early so the first dollar is not gated on LLM invoices.
+
+## D-price $9
+
+Inside the band of an existing $8.49 FSAE Excel pack. Stripe US payout minimum $0.01.
+
+## D-not Gumroad for penny-one
+
+Standard Gumroad payout floor is typically $100.
+
+## D-no personal posting without approval
+
+GitHub Pages indexing first. Reddit/Discord from Jimmy’s accounts needs explicit OK.
+
+## D-no domain/ads yet
+
+Spend $0 until a paying customer exists.

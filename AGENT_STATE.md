@@ -1,54 +1,57 @@
 # AGENT_STATE
 
-**Updated:** 2026-09-13  
-**Authority:** Team shared state for the autonomous profit mission. Repo files beat chat.
+**Updated:** 2026-09-13 17:50 EDT  
+**Authority:** Team shared state. Repo files beat chat.
 
 ## Current mission
 
-Build, launch, operate, and improve a legitimate internet business that produces **net profit** (revenue − attributable costs).  
-First milestone: **$0.01 legitimate net profit**. Then scale toward $100 → $500 → $1,000 → $2,000/mo with rising automation.  
-Code, MVP, and launch alone do **not** complete the mission.
+Build, launch, operate, and improve a legitimate internet business that produces **net profit**.  
+First milestone: **$0.01 legitimate net profit**. Then $100 → $500 → $1,000 → $2,000/mo.
 
 ## Current product
 
-**Inbound Score** (selected experiment): free AI-visibility / GEO audit → paid monitoring for **B2B SaaS &lt;50 employees**.  
-Also in-repo: **Forge** (`src/forge/`) — internal research-scoring toolkit (complete as a library; not the profit product).
+Two tracks:
+
+1. **Inbound Score** (SELECT ACCEPTED): GEO / AI-visibility audit → paid monitoring for B2B SaaS &lt;50 employees. Gated on AC#0 engine COGS. See `decisions/SELECT_inbound_score.md`.
+2. **TubeCheck** (shipped zero-COGS F-path): unofficial FSAE 2026 Size A/B/C/D checker + 4130 nest. Site in `docs/`. $9 Team Pack. See `PAYMENT.md`.
+
+Internal: **Forge** (`src/forge/`) — scoring toolkit, not the profit product.
 
 ## Current experiment
 
-SELECT **ACCEPTED** for Inbound Score. Next: Builder **T3** starts with **AC#0 COGS/engines spike**, then smallest shippable paid path. Parallel: Research may propose faster $0.01 experiments if GEO COGS fails validation.
+- **Track A:** Inbound Score AC#0 COGS spike (needs named engine API calls; may require paid keys).
+- **Track B:** TubeCheck live locally; public Pages + Stripe Payment Link. Cash COGS $0. This is the fastest path to a bank deposit if GEO engines are blocked on spend/auth.
 
 ## Completed work
 
-- Shared memory seeded; Forge + mission histories merged on `main`
-- DISCOVER/VALIDATE v1.1 + scorecard
-- SELECT wedge + ordered MVP AC (AC#0 gates free audit engines)
-- Reviewer FAIL r1/r2 addressed (Forge scope, AC gate, refs)
-- Forge toolkit: ingest/score/store/CLI/dashboard + 20 tests (library only)
+- Shared memory, DISCOVER/VALIDATE, SELECT reviews r1–r3
+- Forge toolkit + 20 tests
+- TubeCheck geometry/nest + tests; local browser verification (1.00×0.095 Size A PASS; 1.375×0.049 Size D OD warning; nest 2 sticks)
 
 ## Active work
 
-- T3 BUILD Inbound Score (Builder) — unlocked after SELECT ACCEPTED
-- Shared profit tracking (`REVENUE.md`) initialized at $0
+- Push TubeCheck `docs/` + GitHub Pages workflow
+- Stripe Payment Link (human)
+- AC#0 still open for Inbound Score
 
 ## Remaining work
 
-- AC#0 COGS pilot (list-price inputs: `research/04_AC0_ENGINE_LIST_PRICES.md`) → AC#1–6 MVP → TEST → LAUNCH → first paid conversion
-- Distribution that gets real buyers
-- Measure net profit; iterate or kill by SELECT kill criteria
-- T8: faster $0.01 paths documented in `OPPORTUNITIES.md` (F1–F4); activate only if GEO blocked
+- Public HTTPS URL for TubeCheck
+- Real $9 checkout
+- AC#0 measured $/run under `product/`
+- First receipt in `REVENUE.md`
 
 ## Known failures
 
-- Prior remote/local divergence (Forge vs mission) — resolved by merge
-- Prior false “mission complete” on Forge-only state — corrected
+- Prior false “mission complete” on Forge-only state
+- Perplexity MCP empty in one local session
+- Gumroad rejected as first-penny vehicle (payout floor)
 
 ## Blockers
 
-- None for starting AC#0. Human approval still required before meaningful spend (domains, paid APIs at scale, ads).
+1. **Stripe/Payhip Payment Link** for TubeCheck — $0 to create, required to collect money (`PAYMENT.md`).
+2. **Engine API keys / spend approval** for Inbound Score AC#0 if no free quota.
 
 ## Next action
 
-**Builder:** run AC#0 COGS/engines spike and write results under `product/`; then land smallest testable surface toward free audit + Stripe test mode.  
-**Research:** keep Plan B / faster $0.01 options updated in `OPPORTUNITIES.md`.  
-**Reviewer:** PASS mission only when `REVENUE.md` shows real net profit &gt; 0.
+Wire Stripe URL into `docs/config.js` when the human pastes it. Enable GitHub Pages if the Actions deploy needs a one-time setting. Do not mark mission PASS until `REVENUE.md` net &gt; 0.
