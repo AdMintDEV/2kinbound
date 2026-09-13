@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-09-13T21:33:46.237310+00:00",
+  "product": "Inbound Score",
+  "ac": "AC#0",
+  "cost_basis": "ESTIMATE",
+  "cost_basis_note": "ESTIMATE = public list prices \u00d7 estimated tokens (4 chars/token). No API keys were required to produce this file. MEASURED appears only when a provider returns usage for the 20-prompt set.",
+  "run_definition": "One run = one brand URL \u00d7 20 prompts \u00d7 the 3 locked engines, plus one OpenAI gpt-4.1-nano scoring roll-up. Each tracked competitor is an extra run of the same 20\u00d73 set.",
+  "prompt_count": 20,
+  "engine_count": 3,
+  "brand_fixture": {
+    "brand": "Northwind Analytics",
+    "url": "https://www.example.com",
+    "category": "B2B product analytics for SaaS teams under 50 employees",
+    "competitor": "Mixpanel",
+    "note": "Fixture for token shape only. Not a real audit. No citations invented."
+  },
+  "prompts": [
+    "What are the best {category} tools for a B2B SaaS company with fewer than 50 employees?",
+    "Recommend {category} software for an early-stage B2B SaaS marketing or growth team.",
+    "Which vendors would you shortlist for {category} in 2026, and why?",
+    "Is {brand} ({url}) a reasonable {category} option for a 20-person SaaS company?",
+    "What tools are like {brand}?",
+    "Best alternatives to {brand} for small B2B SaaS teams.",
+    "{brand} vs {competitor}: which should a startup pick first?",
+    "Who are the top competitors to {brand} in {category}?",
+    "Does anyone recommend {brand} for inbound pipeline or product-led growth?",
+    "What {category} product do small B2B SaaS teams mention most often?",
+    "How should a founder choose a {category} vendor with a budget under $100/month?",
+    "Which {category} tools integrate well with Stripe, HubSpot, or Slack?",
+    "List GTM or SEO tools a B2B SaaS under 50 employees should consider; include {brand} only if relevant.",
+    "For AI-visibility or GEO monitoring aimed at small B2B SaaS, which product names come up?",
+    "Would you mention {url} when answering questions about {category}?",
+    "What pages or claims from {brand} would you actually quote, if any?",
+    "Summarize {brand}'s positioning in {category} and name similar products.",
+    "For the query 'best {category} for B2B startups', which brands belong on a five-name list?",
+    "Is {brand} a leader, challenger, or niche player in {category}? Say if you cannot tell.",
+    "Write a one-paragraph buyer recommendation for {category} aimed at a 15-person B2B SaaS."
+  ],
+  "system_prompt": "You are answering a buyer question about B2B software.\nReturn ONLY JSON with keys:\n  mentioned_brand (boolean),\n  mentioned_url (boolean),\n  other_vendors (array of strings),\n  sources_named (array of strings the model itself stated; empty if none),\n  snippet (string, <= 80 words).\nDo not invent URLs, rankings, or citations that you cannot support from\nyour own answer text. If you are unsure whether the brand appears, set\nmentioned_brand to false. This is a visibility probe, not advice to buy.\n",
+  "planned_mean_input_tokens": 199,
+  "planned_output_tokens": 280,
+  "engines": [
+    {
+      "engine_id": "openai:gpt-4.1-nano",
+      "provider": "OpenAI",
+      "model": "gpt-4.1-nano",
+      "api": "Chat Completions (no web_search tool)",
+      "endpoint": "https://api.openai.com/v1/chat/completions",
+      "citation_native": false,
+      "input_usd_per_1m": 0.1,
+      "output_usd_per_1m": 0.4,
+      "request_fee_usd": 0.0,
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+      "pricing_as_of": "2026-09-13",
+      "planned_input_tokens": 199,
+      "planned_output_tokens": 280,
+      "usd_per_call": 0.0001319,
+      "usd_per_run_20_prompts": 0.002638,
+      "cost_basis": "ESTIMATE",
+      "why": "ChatGPT-class visibility is the question buyers ask first ('does AI recommend us?'). gpt-4.1-nano is the cheapest official OpenAI chat model with a published list price, so we can cover 20 prompts without web-search fees.",
+      "tradeoff": "API answers are not identical to the ChatGPT consumer UI. OpenAI web_search is $10 / 1k calls and is rejected for MVP COGS.",
+      "env_keys": [
+        "OPENAI_API_KEY"
+      ],
+      "key_present": false,
+      "live_probe": {
+        "status": "skipped"
+      }
+    },
+    {
+      "engine_id": "google:gemini-2.5-flash-lite",
+      "provider": "Google",
+      "model": "gemini-2.5-flash-lite",
+      "api": "Gemini Developer API generateContent (no search grounding)",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+      "citation_native": false,
+      "input_usd_per_1m": 0.1,
+      "output_usd_per_1m": 0.4,
+      "request_fee_usd": 0.0,
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "pricing_as_of": "2026-09-13",
+      "planned_input_tokens": 199,
+      "planned_output_tokens": 280,
+      "usd_per_call": 0.0001319,
+      "usd_per_run_20_prompts": 0.002638,
+      "cost_basis": "ESTIMATE",
+      "why": "Gemini is the second buyer-relevant answer engine after ChatGPT. Flash-Lite is Google's cheapest current Gemini list price and is reliable enough for yes/no mention + vendor-list extraction.",
+      "tradeoff": "Grounding with Google Search is $35 / 1k prompts after a free quota. Paid COGS must not assume that quota, so MVP does not enable grounding. Mentions are model-knowledge, not live SERP.",
+      "env_keys": [
+        "GEMINI_API_KEY",
+        "GOOGLE_API_KEY"
+      ],
+      "key_present": false,
+      "live_probe": {
+        "status": "skipped"
+      }
+    },
+    {
+      "engine_id": "perplexity:perplexity/sonar+web_search",
+      "provider": "Perplexity",
+      "model": "perplexity/sonar",
+      "api": "Agent API responses.create with tools=[{type: web_search}]",
+      "endpoint": "https://api.perplexity.ai/v1/agent",
+      "citation_native": true,
+      "input_usd_per_1m": 0.25,
+      "output_usd_per_1m": 2.5,
+      "request_fee_usd": 0.0025,
+      "pricing_source": "https://docs.perplexity.ai/docs/agent-api/models ; https://docs.perplexity.ai/docs/getting-started/pricing",
+      "pricing_as_of": "2026-09-13",
+      "planned_input_tokens": 199,
+      "planned_output_tokens": 280,
+      "usd_per_call": 0.00324975,
+      "usd_per_run_20_prompts": 0.064995,
+      "cost_basis": "ESTIMATE",
+      "why": "Only citation-native engine in the set: Agent API returns search_results URLs. Required for GEO 'who cites us' without inventing sources. Successor to Sonar Chat Completions, which retires 2026-09-27 \u2014 lock the Agent API now so AC#2 does not ship a dying endpoint.",
+      "tradeoff": "Request fee dominates unit cost (~$0.0025/call vs <<$0.001 tokens). Do not use Agent API presets (fast/low/\u2026) \u2014 those can resolve to pricier third-party models. Do not add fetch_url.",
+      "env_keys": [
+        "PERPLEXITY_API_KEY"
+      ],
+      "key_present": false,
+      "live_probe": {
+        "status": "skipped"
+      }
+    }
+  ],
+  "scoring_roll_up": {
+    "engine_id": "openai:gpt-4.1-nano",
+    "usd": 0.0003216,
+    "input_tokens": 1616,
+    "output_tokens": 400,
+    "cost_basis": "ESTIMATE",
+    "note": "Scoring is not a fourth visibility engine."
+  },
+  "usd_per_run": 0.0705926,
+  "starter": {
+    "list_price_usd": 29.0,
+    "on_demand_audits_per_month": 4,
+    "scheduled_rechecks_per_month": 4,
+    "competitors_tracked": 2,
+    "brand_runs_per_month": 24,
+    "monthly_cogs_usd": 1.6942224,
+    "cogs_ratio": 0.058421,
+    "cogs_cap_ratio": 0.3,
+    "cogs_cap_usd": 8.7,
+    "gate_passed": true,
+    "fail_reasons": []
+  },
+  "free_audit": {
+    "audits_per_ip_per_day": 3,
+    "uses_locked_engine_set": true,
+    "usd_per_audit_estimate": 0.0705926,
+    "note": "Marketing COGS, not Starter subscriber COGS. Same 20\u00d73 run."
+  },
+  "fail_criteria": [
+    "FAIL AC#0 / do not ship AC#2 if estimated or measured monthly COGS at the intended Starter limits is >= 30% of $29.00 ($8.70).",
+    "FAIL if dropping to the $19 floor AND minimum-viable limits (2 on-demand audits + 2 weekly rechecks + 1 competitor) still cannot keep COGS < 30% of $19.00 ($5.70).",
+    "FAIL if the locked set cannot include a citation-native engine under the cap (Perplexity Agent API perplexity/sonar + web_search is that engine).",
+    "FAIL if a later live measurement is >2\u00d7 this estimate and the inflated $/run breaks the 30% cap \u2014 re-run this harness and tighten limits or drop an engine only via a new AC#0 revision.",
+    "Do not 'fix' a FAIL by inventing citations, skipping prompts, or swapping in unofficial scrapers / consumer-UI automation."
+  ],
+  "ac2_unblocked": true,
+  "list_price_usd": 29.0
+}
