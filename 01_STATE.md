@@ -1,31 +1,32 @@
 # Project state
 
 **Last updated:** 2026-09-13  
-**Phase:** LAUNCH PREP — pack leak closed on tip; checkout URL still missing  
+**Phase:** LAUNCH PREP — paywall PASS; monetization + WTP risk  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
 **Goal Manager:** Warden  
-**HEAD:** `615c3f9` (PR #3 merged)
+**HEAD:** see tip (T4b at `e354daf`+)
 
 ## Snapshot
 
 | Field | Value |
 |-------|--------|
-| Mission | First legitimate **net profit** ($0.01+), then $2,000/mo |
+| Mission | First legitimate **net profit** ($0.01+) → $2,000/mo |
 | Product URL | https://admintdev.github.io/2kinbound/ |
-| Pack CSV on Pages | **404** (verified post-deploy) |
-| Catalog on main tip | **not tracked** |
+| Pack leak (tip/Pages) | **CLOSED** — T4b PASS |
 | Net profit | $0.00 |
-| Can collect money | **NO** — human merchant URL still required |
+| Merchant URL | **MISSING** (human) |
+| WTP risk | Free `CATALOG` table in `docs/app.js` overlaps $9 pack — T11 |
 
 ## Blockers
 
 | ID | Blocker | Status |
 |----|---------|--------|
-| B5 | Pack assets free on tip | **RESOLVED** — PR #3; Pages 404 |
-| B4 | Merchant checkout URL | **ACTIVE** — Payhip preferred (`PAYMENT.md`) |
+| B5 | Pack free on tip | **RESOLVED** — T4b PASS |
+| B4 | Merchant checkout URL | **ACTIVE** — human |
+| B6 | Free on-page catalog may kill $9 WTP | **ACTIVE** — Builder T11 |
 
 ## Next action
 
-1. Tester T4b adversarial re-test
-2. Human creates $9 Payhip (private catalog upload) and pastes URL
-3. Wire `paymentUrl` → Draft A (r/FSAE) with human approval
+1. Builder T11: thin free CATALOG to teaser; keep full map for merchant-only file
+2. Reviewer T6: money-path review vs T4b evidence
+3. Human: Payhip with **rotated** catalog (not historical public CSV)
