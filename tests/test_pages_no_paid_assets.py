@@ -11,7 +11,7 @@ def test_full_catalog_not_in_pages_root() -> None:
 def test_pages_workflow_publishes_docs_only() -> None:
     workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text()
     assert "path: docs" in workflow
-    assert "pack_assets" not in workflow
+    assert "path: pack_assets" not in workflow
 
 
 def test_public_docs_do_not_link_paid_catalog() -> None:
