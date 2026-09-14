@@ -24,5 +24,5 @@
 
 ## Next action
 
-1. Human: `python scripts/generate_team_pack.py`, upload `pack/private/` in Payhip, paste checkout URL  
+1. Human: `python3 scripts/generate_team_pack.py`, upload `pack/private/` in Payhip, paste checkout URL  
 2. Builder: wire `paymentUrl` → Draft A (idle until paste)

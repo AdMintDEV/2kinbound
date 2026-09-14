@@ -4,7 +4,7 @@
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T10 | BLOCKED | Human | Merchant URL + Draft A (upload `pack/private/` after `python scripts/generate_team_pack.py`) |
+| T10 | BLOCKED | Human | Merchant URL + Draft A (upload `pack/private/` after `python3 scripts/generate_team_pack.py`) |
 | T12 | TODO | Tester | Post-wire checkout smoke |
 | T7 | TODO | Builder+ | First sale MEASURE |
 | T3b | BLOCKED | Builder | AC#0b parked |

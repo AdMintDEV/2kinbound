@@ -13,7 +13,7 @@ Do not commit the catalog, zip, or `PACK_NOTES.md` anywhere in this repo. Do not
 Paid files are **not** in git. After clone, build them on your machine:
 
 ```bash
-python scripts/generate_team_pack.py
+python3 scripts/generate_team_pack.py
 ```
 
 That writes **only** these local, gitignored paths (never add them):

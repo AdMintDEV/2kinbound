@@ -26,7 +26,7 @@ python -m http.server 8080 --directory docs
 
 http://127.0.0.1:8080 — not SAE, not SES.
 
-$9 Team Pack is sold at a merchant checkout (Payhip or Stripe file attachment). The catalog is not in this public repo. After clone, run `python scripts/generate_team_pack.py` and upload the gitignored files under `pack/private/` (`PAYMENT.md`). Paste the checkout URL into `docs/config.js`.
+$9 Team Pack is sold at a merchant checkout (Payhip or Stripe file attachment). The catalog is not in this public repo. After clone, run `python3 scripts/generate_team_pack.py` and upload the gitignored files under `pack/private/` (`PAYMENT.md`). Paste the checkout URL into `docs/config.js`.
 
 ## SELECT — Inbound Score
 
