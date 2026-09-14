@@ -19,6 +19,11 @@ DONE — `615c3f9`
 Idle until human pastes `paymentUrl` → wire `docs/config.js`. Out of scope: inventing URL, AC#0b, posting Draft A.
 
 
+## T17
+Status: COMPLETE
+Owner: Research
+Output: `research/06_TUBECHECK_SOFT_LAUNCH_DRAFT.md`
+
 ## T16
 Status: COMPLETE
 Owner: Research
