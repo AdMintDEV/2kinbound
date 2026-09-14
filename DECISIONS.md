@@ -33,3 +33,7 @@ Tester proved `4130-catalog.csv` is free on Pages; `?k=` unlock is obscurity.
 **Decision:** Kill client-side paywall. First-dollar rail = merchant that delivers the file (Payhip preferred). Builder T8 removes public paid assets.
 | 2026-09-13 | T11 teaser CATALOG PASS; sandbox≠revenue; money path still CONDITIONAL | ACCEPTED | `reviews/REVIEW_2026-09-13_MONEY_PATH_T11.md` |
 | 2026-09-14 | T13: merchant catalog generated locally into gitignored `pack/private/`; never commit; do not sell git-history CSV | ACCEPTED | `scripts/generate_team_pack.py`; `PAYMENT.md` |
+
+## D-soft-launch-free-checker (2026-09-14)
+
+Kill My Idea T16: soft-launch free TubeCheck checker with **no Buy mention** while live merchant is missing. Do not advertise sandbox Stripe. Paid Draft A waits on live Payhip/Stripe + delivery.

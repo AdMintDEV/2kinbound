@@ -1,28 +1,24 @@
 # Project state
 
 **Last updated:** 2026-09-14  
-**Phase:** LAUNCH PREP — sandbox CTA PASS; live money still blocked  
+**Phase:** SOFT LAUNCH PREP — free checker OK; paid Buy held  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
-**Goal Manager:** Warden
+**Goal Manager:** Warden  
+**HEAD:** `a58d0f6` (T16)
 
 ## Snapshot
 
 | Field | Value |
 |-------|--------|
 | Net profit | $0.00 |
-| Sandbox CTA | **T12 PASS** |
-| paymentUrl | sandbox `test_` only |
-| Live merchant | **MISSING** |
-| Private pack | `pack/private/` ready |
-
-## Blockers
-
-| ID | Blocker | Status |
-|----|---------|--------|
-| B4-live | Live (non-test) merchant + file delivery | **ACTIVE** |
+| TubeCheck Kill My Idea | **SURVIVES** + GTM PIVOT (pre-revenue) |
+| Inbound Score | **SURVIVES**, deprioritized |
+| Soft-launch free checker | **YES** (no Buy mention) |
+| Sandbox Buy advertise | **NO** |
+| Live merchant | missing |
 
 ## Next action
 
-1. Human: live Payhip/Stripe + upload `pack/private/4130-team-pack.zip`  
-2. Research T16: refresh Kill My Idea (TubeCheck + Inbound Score) with post-T12 evidence  
-3. Draft A only after live URL (sandbox checkout is wrong to advertise)
+1. Human approve free-checker Draft A (no Buy) → post from real account  
+2. Human live Payhip when ready → then paid Draft A  
+3. No third product; no GEO spend

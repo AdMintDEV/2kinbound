@@ -2,13 +2,16 @@
 
 **Updated:** 2026-09-14 (Goal Manager: Warden)
 
-## Bottleneck
+## Policy (from T16)
 
-Live (non-test) merchant. Sandbox CTA proven (T12). Advertising sandbox would burn trust.
+- Soft-launch **free checker only** — OK  
+- Do **not** advertise sandbox Buy  
+- Draft A paid CTA held until live merchant  
+- Inbound Score deprioritized; no third product  
 
 ## Active
 
 | ID | Agent | Task |
 |----|-------|------|
-| T14 | Human | Live Payhip/Stripe |
-| T16 | Research | Refresh Kill My Idea files |
+| T17 | Research | Free-checker-only draft |
+| T14 / T10b | Human | Live merchant / post approval |
