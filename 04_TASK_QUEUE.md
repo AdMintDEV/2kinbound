@@ -4,14 +4,15 @@
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T10 | BLOCKED | Human | Merchant URL + Draft A |
-| T12 | TODO | Tester | Post-wire checkout smoke |
-| T7 | TODO | Builder+ | First sale MEASURE |
+| T12 | IN_PROGRESS | Tester | Post-wire smoke: sandbox CTA + fail-closed pack |
+| T14 | BLOCKED | Human | Live (non-test) merchant URL + Payhip file upload |
+| T7 | TODO | Builder+ | First **real** sale MEASURE |
 | T3b | BLOCKED | Builder | AC#0b parked |
 
 ## Done
 
 | ID | Owner | Task |
 |----|-------|------|
-| T13 | Builder | Private rotated Team Pack generator + local `pack/private/` |
-| T11 / T6 / T4b / T8 / T9 | — | WTP teaser, review, paywall, distribution |
+| T13 | Builder | Private pack generator |
+| T11 / T8 / T4b / T6 / T9 | — | WTP, paywall, review, distribution |
+| T15 | Builder+Warden | Wire sandbox paymentUrl on main |

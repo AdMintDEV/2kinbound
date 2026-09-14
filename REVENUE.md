@@ -21,3 +21,8 @@ All figures USD. No test, simulated, or affiliate-click “sales.”
 | 2026-09-13 | open | Mission start (shared) | 0.00 | 0.00 | 0.00 | no transactions |
 
 Mission PASS requires a real customer payment minus attributable costs, with a receipt.
+
+## Notes
+
+- Sandbox / test Stripe Payment Link may be wired in `docs/config.js` for CTA testing.
+- Test charges are **not** revenue and must not appear in the ledger above.

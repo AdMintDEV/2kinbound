@@ -4,10 +4,11 @@
 
 ## Bottleneck
 
-Human merchant checkout URL only. Pack upload files exist locally at `pack/private/` (gitignored).
+Sandbox CTA is wired for testing. **Real** first dollar still needs a live merchant link + private pack upload. Sandbox charges ≠ `REVENUE.md`.
 
-Sandbox Payment Link OK for wiring; ≠ revenue. Prefer public link in `docs/config.js`.
+## Active
 
-## Idle
-
-Builder / Research / Tester wait on URL. Debugger may mint sandbox link in 1:1 if keys provided privately.
+| ID | Agent | Task |
+|----|-------|------|
+| T12 | Tester | Smoke sandbox money path |
+| T14 | Human | Live Payhip/Stripe when ready |
