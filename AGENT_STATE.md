@@ -4,11 +4,11 @@
 
 ## Bottleneck
 
-Sandbox CTA is wired for testing. **Real** first dollar still needs a live merchant link + private pack upload. Sandbox charges ≠ `REVENUE.md`.
+Live (non-test) merchant. Sandbox CTA proven (T12). Advertising sandbox would burn trust.
 
 ## Active
 
 | ID | Agent | Task |
 |----|-------|------|
-| T12 | Tester | Smoke sandbox money path |
-| T14 | Human | Live Payhip/Stripe when ready |
+| T14 | Human | Live Payhip/Stripe |
+| T16 | Research | Refresh Kill My Idea files |
