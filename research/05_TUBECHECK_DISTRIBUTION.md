@@ -4,7 +4,7 @@
 **Updated:** 2026-09-13  
 **Product:** https://admintdev.github.io/2kinbound/  
 **Constraint:** No outbound posts by agents. All draft copy = **NEEDS HUMAN APPROVAL**.  
-**Blocker:** Pack leakage still P0 (`reviews/TEST_2026-09-13_TUBECHECK_LIVE.md`). **Do not drive buyers until T8 closes free unlock** and a Payhip/Stripe delivery URL exists (`PAYMENT.md`).
+**Policy (2026-09-14):** Soft-launch = **free checker only** (no Buy / no Team Pack / no sandbox Stripe). Pack leakage closed on tip (404). Live merchant still missing — do **not** advertise paid CTA. See `experiments/active/tubecheck_KILL.md` (T16).
 
 ## Ranking (expected time-to-first-buyer, $0 spend)
 
@@ -107,7 +107,20 @@ ASSUMPTION ranking — TubeCheck has no conversion history (UNKNOWN). Ordered fo
 
 ## Draft posts — NEEDS HUMAN APPROVAL — DO NOT POST
 
-### Draft A — r/FSAE (Rank 1)
+### Draft A-free — r/FSAE soft-launch (CURRENT — free checker only)
+**Status:** Ready for human approval under Goal Manager soft-launch policy. **No Buy. No Team Pack. No sandbox Stripe.**  
+**Title:** Unofficial FSAE 2026 Size A/B/C/D tube checker (not SAE / not SES)  
+**Body:**
+> Built a free browser tool that checks steel tube OD/wall against the 2026 Size A–D tables and nests 4130 stick cuts.
+>
+> Important: **not SAE, not a substitute for the official SES.** Use the rulebook + SES for anything that matters in tech. Inch examples vs mm tables can disagree by tenths of a mm — we surface that (e.g. published 1.375×0.049 vs 35.0 mm Size D OD).
+>
+> Live: https://admintdev.github.io/2kinbound/
+>
+> Looking for chassis leads to break edge cases. If the checker disagrees with the rulebook, comment with the Size + dims — I’ll fix it.
+
+### Draft A-paid — r/FSAE (HELD until live merchant)
+**Status:** **HELD.** Do not post while `paymentUrl` is sandbox/`test_` or delivery unverified.  
 **Title:** Unofficial FSAE 2026 Size A/B/C/D tube checker (not SAE / not SES)  
 **Body:**
 > Built a free browser tool that checks steel tube OD/wall against the 2026 Size A–D tables and nests 4130 stick cuts.
@@ -118,9 +131,9 @@ ASSUMPTION ranking — TubeCheck has no conversion history (UNKNOWN). Ordered fo
 >
 > Looking for chassis leads to break it. If something’s wrong vs the rulebook, tell me.
 >
-> (Optional Team Pack is separate; free checker stays free.)
+> (Optional Team Pack is separate; free checker stays free.) ← only after **live** Payhip/Stripe + delivery PASS
 
-### Draft B — FSAE.com Open Discussion (Rank 2)
+### Draft B — FSAE.com Open Discussion (Rank 2) — soft-launch OK (no Buy)
 **Subject:** Browser Size A–D / 4130 nest helper for 2026 (unofficial)  
 **Body:**
 > Posting a small free tool for tube-frame teams working 2026 Size A/B/C/D:
@@ -131,15 +144,26 @@ ASSUMPTION ranking — TubeCheck has no conversion history (UNKNOWN). Ordered fo
 > Why it exists: testing caught the published 1.375×0.049 vs 35.0 mm Size D OD mismatch (~0.075 mm).
 >
 > Feedback welcome from anyone deep in frame/SES this season.
+>
+> (No paid product pitch in this soft-launch version.)
 
-### Draft C — Discord (Rank 3)
-> Free unofficial 2026 Size A–D tube checker + 4130 nest (not SAE/SES): https://admintdev.github.io/2kinbound/ — looking for chassis folks to break edge cases. Happy to move if wrong channel.
+### Draft C — Discord (Rank 3) — soft-launch OK (no Buy)
+> Free unofficial 2026 Size A–D tube checker + 4130 nest (not SAE/SES): https://admintdev.github.io/2kinbound/ — looking for chassis folks to break edge cases. Happy to move if wrong channel. (No pack/Buy link.)
 
-## Prerequisites before any approved post
-1. T8 VERIFIED (full catalog not public).
-2. Human pastes Payhip/Stripe delivery URL into `docs/config.js` (`PAYMENT.md`).
-3. Human posts Draft A/B/C (or edited) from a real account.
-4. Log attempts under `market/customer_signals/` (date, channel, URL, replies).
+## Prerequisites
+
+### Soft-launch post (Draft A-free / B / C no-Buy)
+1. Pack CSV still 404 on Pages (T8/T12).
+2. Human approves exact text.
+3. Human posts from a real account — agents do not post.
+4. Log under `market/customer_signals/` (date, channel, URL, replies).
+5. **Do not** mention Team Pack, $9, Stripe, Payhip, or sandbox checkout.
+
+### Paid CTA post (Draft A-paid)
+1. Soft-launch prerequisites, plus:
+2. **Live** (non-`test_`) merchant URL in `docs/config.js`.
+3. Paid file delivery verified (Payhip attach or equivalent).
+4. Tester/Reviewer OK that Buy does not leak free assets.
 
 ## Next (Goal Manager / Human)
-After T8 PASS: approve **Draft A (r/FSAE)** first.
+Approve **Draft A-free** when ready for soft-launch feedback. Keep **Draft A-paid** held until live merchant.

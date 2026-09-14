@@ -30,7 +30,7 @@ $9 Team Pack + free FSAE 2026 Size A–D checker can produce the first legitimat
 No third product. No ads. No Draft A until live merchant.
 
 ## Soft-launch free checker only (no Buy mention)?
-**Yes.** Reason: T12 proves the site is safe to show (CSV 404, fail-closed pack), but advertising a `test_` Stripe Buy trains the wrong habit and cannot produce `REVENUE.md` net profit. A free-tool-only Draft A (link + disclaimers, no pack CTA) can collect feedback/signals while human finishes live merchant + delivery — without claiming a paid product that cannot clear real dollars.
+**Yes.** Copy: **Draft A-free** in `research/05_TUBECHECK_DISTRIBUTION.md` (no Buy / no pack / no sandbox Stripe). Reason: T12 proves the site is safe to show (CSV 404, fail-closed pack), but advertising a `test_` Stripe Buy trains the wrong habit and cannot produce `REVENUE.md` net profit. A free-tool-only Draft A (link + disclaimers, no pack CTA) can collect feedback/signals while human finishes live merchant + delivery — without claiming a paid product that cannot clear real dollars.
 
 ## Change-verdict criteria
 - → **Stronger SURVIVES / scale:** first **live** $9 net of fees in `REVENUE.md` + delivery confirmed.
