@@ -1,9 +1,15 @@
 # 4130 Team Pack
 
-This folder does not contain paid files.
+This folder does not contain paid files. `pack/private/` is gitignored.
 
-The **full Size A/B/C/D 4130 catalog** is attached privately in Payhip or Stripe (file attachment or post-pay email). It is not in this repository. The public Pages site may show a short teaser (≤4 illustrative rows) so visitors know the checker works; that teaser is not the pack.
+Generate the merchant upload bundle locally after clone:
 
-Do not add the catalog, or any other paid exclusive, to this git repository — the repo is public.
+```bash
+python3 scripts/generate_team_pack.py
+```
 
-See `PAYMENT.md`.
+That writes `pack/private/4130-team-pack-catalog.csv`, `pack/private/PACK_NOTES.md`, and `pack/private/4130-team-pack.zip`. Upload those local paths in Payhip or Stripe. Do not commit them. Do not use a catalog from git history.
+
+The public Pages site may show a short teaser (≤4 illustrative rows) so visitors know the checker works; that teaser is not the pack.
+
+See `PAYMENT.md` for exact upload steps.
