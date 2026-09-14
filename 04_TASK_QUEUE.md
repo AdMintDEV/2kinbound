@@ -4,16 +4,18 @@
 
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
-| T17 | IN_PROGRESS | Research | Free-checker Draft A (no Buy) for human approval |
-| T14 | BLOCKED | Human | Live merchant + pack upload |
-| T10b | BLOCKED | Human | Post free Draft A after approval |
+| T10b | BLOCKED | Human | Approve + post free Draft A (`research/06_…`) |
+| T18 | IN_PROGRESS | Research | Kill My Idea + scorecard for **C4** and **C6** |
+| T14 | BLOCKED | Human | Live merchant when ready (E1 paid path) |
 | T7 | TODO | Builder+ | First real sale MEASURE |
-| T3b | BLOCKED | Builder | AC#0b parked |
 
-## Done
+## Parked
 
-| ID | Owner | Task |
-|----|-------|------|
-| T16 | Research | Kill My Idea refresh |
-| T12 | Tester | Sandbox CTA PASS |
-| T13 / T11 / T8 / T4b / T6 / T9 | — | prior |
+| ID | Why |
+|----|-----|
+| T3b GEO | Deprioritized until E1 L1 attempt concludes |
+| TubeCheck polish | No P0; busywork |
+
+## Done (recent)
+
+T12 sandbox CTA · T16/T17 Kill + soft drafts · T13 private pack · T11/T8 paywall
