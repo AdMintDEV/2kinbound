@@ -5,8 +5,8 @@
 | ID | Status | Owner | Task |
 |----|--------|-------|------|
 | T13 | IN_PROGRESS | Builder | Generate private rotated Team Pack assets (gitignored) for Payhip |
-| T10 | BLOCKED | Human | Merchant URL + Draft A |
-| T12 | TODO | Tester | Post-wire checkout smoke |
+| T10 | BLOCKED | Human | Live merchant URL + Draft A (sandbox wired, not live) |
+| T12 | TODO | Tester | Post-wire checkout smoke (sandbox) |
 | T7 | TODO | Builder+ | First sale MEASURE |
 | T3b | BLOCKED | Builder | AC#0b parked |
 

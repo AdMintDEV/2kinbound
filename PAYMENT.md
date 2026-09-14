@@ -6,6 +6,10 @@ TubeCheck cannot collect money until a merchant link exists **and** paid files a
 
 Static Pages and a public git repo cannot securely gate files. `pack.html` is a post-pay / status landing only — it does not host or link paid files. The owner attaches the catalog privately in the merchant dashboard. Do not commit the catalog anywhere in this repo.
 
+## Current wiring (sandbox)
+
+`docs/config.js` has a **Stripe TEST/sandbox** Payment Link (`https://buy.stripe.com/test_...`). It is for checkout CTA / smoke tests only. Test charges are **not** revenue and must not be written into `REVENUE.md`. A live Payhip or live Stripe Payment Link is still required to collect money.
+
 ## Preferred: Payhip (digital delivery)
 
 Payhip hosts the paid download.

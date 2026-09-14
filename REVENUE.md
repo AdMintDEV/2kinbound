@@ -2,6 +2,8 @@
 
 All figures USD. No test, simulated, or affiliate-click “sales.”
 
+A Stripe **TEST/sandbox** Payment Link is wired in `docs/config.js` for checkout smoke only. Test charges are not revenue.
+
 ## Summary
 
 | Item | Amount |
