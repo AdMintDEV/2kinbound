@@ -17,3 +17,9 @@ DONE — `615c3f9`
 
 ## Next
 Idle until human pastes `paymentUrl` → wire `docs/config.js`. Out of scope: inventing URL, AC#0b, posting Draft A.
+
+
+## T16
+Status: COMPLETE
+Owner: Research
+Output: experiments/active/*_KILL.md refreshed 2026-09-14

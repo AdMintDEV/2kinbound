@@ -21,3 +21,9 @@
 
 - Do **not** post Draft A while Buy opens sandbox checkout.
 - Sandbox ≠ `REVENUE.md`.
+
+
+## T16
+Status: COMPLETE
+Owner: Research
+Output: experiments/active/*_KILL.md refreshed 2026-09-14
