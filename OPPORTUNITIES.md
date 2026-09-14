@@ -20,9 +20,9 @@ Scores below are **1–5 ASSUMPTIONS** unless Evidence says FACT. Kill My Idea b
 | C1 | Niche SEO / alternatives directory | Candidate | 2 | 5 | FACT: OpenAlternative ~$6.5k MRR founder claim | Med | Slow organic; Plan B |
 | C2 | Screenshot / utility API | Candidate | 3 | 5 | FACT: ScreenshotOne pricing from $17/mo | Med | Commodity; good if GEO COGS fails |
 | C3 | Legal comps / data API | Candidate | 2 | 5 | FACT: SoldComps TrustMRR ~$15k MRR | High* | *Dataset legality UNKNOWN |
-| C4 | One-shot digital pack (non-FSAE niche) | Candidate | 5 | 4 | Pattern: Gumroad/community first sales (secondary blogs) | Med | Pick niche via pain threads first |
+| C4 | One-shot digital pack (non-FSAE niche) | **KILL generic** | 5 | 4 | Seller posts exist; problem-side niche unlocked | Low | See `experiments/active/c4_digital_pack_KILL.md` |
 | C5 | App-store mockup / carousel micro-tool | Watch | 4 | 3 | FACT: FrondFrame TrustMRR ~$50/30d; Insta Posts ~$18 MRR | Low–Med | Proves tiny tools can sell; crowded AI wrappers |
-| C6 | “Kill My Idea” validation report ($9–$39) | Candidate | 4 | 3 | FACT: Proven product exists (TrustMRR); we already have Kill contract | Med | Meta-product; compete with Proven |
+| C6 | “Kill My Idea” validation report ($9–$39) | **PIVOT** (no SaaS clone) | 4 | 3 | Pain threads FACT; Proven ~$1 MRR FACT | Low–Med | See `experiments/active/c6_validation_report_KILL.md` |
 | C7 | Boring B2B calculator / compliance tracker | Candidate | 3 | 4 | Idea literature only — demand **UNKNOWN** | UNKNOWN | Needs demand_validator pass |
 
 \*Only if legal/public data path clears Kill My Idea.
@@ -50,3 +50,7 @@ Scores below are **1–5 ASSUMPTIONS** unless Evidence says FACT. Kill My Idea b
 > What is currently the highest-probability **legitimate** path to the **next** dollar of profit?
 
 If not TubeCheck, reallocate. Do not protect sunk cost.
+
+
+## T18
+C4/C6 Kill complete — recommendation in `research/08_C4_C6_RECOMMENDATION.md`.
