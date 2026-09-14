@@ -10,8 +10,18 @@ from tubecheck.pack_gate import is_pack_unlocked, pack_page_state
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-SKIP_DIRS = {".git", ".venv", "__pycache__", ".pytest_cache", "node_modules", "dist", "build", "htmlcov"}
-PAID_FILENAMES = {"4130-catalog.csv"}
+SKIP_DIRS = {
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+    "node_modules",
+    "dist",
+    "build",
+    "htmlcov",
+    "private",
+}
+PAID_FILENAMES = {"4130-catalog.csv", "4130-team-pack-catalog.csv", "4130-team-pack.zip"}
 
 
 def _js_call(fn: str, cfg: dict, params: dict):

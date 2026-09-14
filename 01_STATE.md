@@ -14,6 +14,7 @@
 | T11 teaser catalog | **PASS** (review addendum) |
 | Money path | CONDITIONAL — `paymentUrl` empty |
 | Merchant URL | **MISSING** |
+| T13 private pack generator | **DONE** (run locally; `pack/private/` gitignored) |
 
 ## Blockers
 
@@ -23,5 +24,5 @@
 
 ## Next action
 
-1. Builder T13: private rotated pack file (gitignored) for Payhip upload  
-2. Human pastes checkout URL → wire `paymentUrl` → Draft A
+1. Human: `python scripts/generate_team_pack.py`, upload `pack/private/` in Payhip, paste checkout URL  
+2. Builder: wire `paymentUrl` → Draft A (idle until paste)
