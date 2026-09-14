@@ -1,28 +1,21 @@
 # Project state
 
 **Last updated:** 2026-09-14  
-**Phase:** LAUNCH PREP — code ready; merchant URL missing  
+**Phase:** LAUNCH PREP — merchant upload bundle ready; checkout URL missing  
 **Repo:** https://github.com/AdMintDEV/2kinbound  
-**Goal Manager:** Warden
+**Goal Manager:** Warden  
+**HEAD:** see tip (T13 merged)
 
 ## Snapshot
 
 | Field | Value |
 |-------|--------|
 | Net profit | $0.00 |
-| Paywall | PASS (T4b) |
-| T11 teaser catalog | **PASS** (review addendum) |
-| Money path | CONDITIONAL — `paymentUrl` empty |
+| Paywall / T11 | PASS |
+| Private pack generator | **DONE** (T13) — `scripts/generate_team_pack.py` |
+| Local upload files | `pack/private/` (gitignored) |
 | Merchant URL | **MISSING** |
-| T13 private pack generator | **DONE** (run locally; `pack/private/` gitignored) |
-
-## Blockers
-
-| ID | Blocker | Status |
-|----|---------|--------|
-| B4 | Merchant checkout URL | **ACTIVE** — human |
 
 ## Next action
 
-1. Human: `python3 scripts/generate_team_pack.py`, upload `pack/private/` in Payhip, paste checkout URL  
-2. Builder: wire `paymentUrl` → Draft A (idle until paste)
+Human: Payhip $9 — upload `pack/private/4130-team-pack.zip` (or CSV + notes) → paste checkout URL → Builder wires `paymentUrl`.
